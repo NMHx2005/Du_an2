@@ -1,0 +1,106 @@
+// Main css
+#header {
+    padding-top: 20px;
+    z-index: 999;
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        border: 1px solid var(--primary-primary);
+        border-radius: 999px;
+
+        .bars-wrapper {
+            position: relative;
+
+            .mbnav-btn {
+                width: 24px;
+                height: 24px;
+                background-color: transparent;
+                outline: none;
+                border: none;
+
+                svg, img {
+                    width: 100%;
+                    display: none;
+
+                    &.active {
+                        display: inline-block;
+                    }
+                }
+            }
+            
+            .bars-content {
+                position: absolute;
+                padding: 10px 12px;
+                border: 1.75px solid var(--primary-primary);
+                border-radius: 10px;
+                display: none;
+                background-color: #000;
+                z-index: 999;
+
+                &.active {
+                    display: block;
+                }
+
+                a.bars-link {
+                    display: block;
+                    font-size: 8px;
+                    width: 100%;
+                    text-wrap: nowrap;
+                    text-align: center;
+                    color: #FFF;
+                    text-decoration: none;
+                    padding: 8px 18px;
+
+                    &:not(:last-child) {
+                        border-bottom: 0.5px solid rgba(255, 255, 255, 0.4);
+                    }
+
+                    &.active {
+                        color: var(--text-yellow);
+                    }
+                }
+            }
+        }
+
+        a.nav-item {
+            text-decoration: none;
+            color: #fff;
+            font-size: 22px;
+
+            &.home {
+                color: var(--text-yellow);
+                margin-left: 120px;
+            }
+        }
+
+        .connects {
+            a.x {
+                padding: 12px 42px;
+                background-color: var(--primary-primary);
+                border-radius: 999px;
+                text-decoration: none;
+                color: var(--text-yellow);
+                font-size: 18px;
+                margin-right: 20px;
+
+                &.connected {
+                    padding: 8px 38px;
+                    background-color: transparent;
+                    border: 4px solid var(--primary-primary);
+                }
+            }
+            a.wl {
+                padding: 8px 38px;
+                background-color: var(--text-yellow);
+                border: 4px solid var(--primary-primary);
+                border-radius: 999px;
+                text-decoration: none;
+                color: var(--primary-primary);
+                font-size: 18px;
+            }
+        }
+    }
+}

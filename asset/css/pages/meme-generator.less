@@ -1,0 +1,197 @@
+// #header {
+//     padding: 16px 0;
+
+//     nav {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         height: 100%;
+
+//         a {
+//             text-decoration: none;
+//             color: var(--base-white);
+//             font-size: 48px;
+//         }
+//     }
+// }
+
+#generator-box {
+    margin-top: 100px;
+    position: relative;
+
+    .title {
+        font-size: 96px;
+        color: var(--primary-primary);
+        text-align: center;
+    }
+
+    .game-wrapper {
+        margin: 60px 0;
+
+        .abs-box-social {
+            position: absolute;
+            right: 10px;
+            bottom: 50%;
+            transform: translateY(50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            a {
+                width: 48px;
+                padding: 8px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .lot {
+            border-right: 3px solid var(--text-yellow);
+            padding-right: 22px;
+
+            .munki-frame {
+                width: 100%;
+                padding-top: 100%;
+                border: 25px solid var(--primary-primary);
+                border-radius: 25px;
+                background: url('../../images/meme-generator/tired-munki.png') no-repeat 0;
+                background-size: contain;
+            }
+
+            .actions {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .action {
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 42px;
+                    text-align: center;
+                    font-size: 36px;
+                    background-color: var(--primary-primary);
+                    color: var(--text-yellow);
+                    border: 7px solid var(--primary-primary);
+                    border-radius: 50px;
+                    outline: none;
+
+                    &.outline {
+                        background-color: var(--base-white);
+                        color: var(--primary-primary);
+                    }
+                }
+            }
+        }
+
+        .rob {
+            .task-item {
+                margin-bottom: 35px;
+
+                .heading {
+                    font-size: 24px;
+                    color: var(--primary-primary);
+                    margin-left: 120px;
+                }
+
+                .squares-wrapper {
+                    display: flex;
+                    align-items: center;
+
+                    .squares-container {
+                        flex: 1;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .square-item {
+                            width: 90px;
+                            height: 90px;
+                            border-radius: 16px;
+                            background-color: #D9D9D9;
+                        }
+                    }
+
+                    .change-btn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: url('../../images/meme-generator/change-frame.png') no-repeat 0;
+                        background-size: contain;
+                        width: 117px;
+                        height: 110px;
+                        outline: none;
+                        border: none;
+                    }
+                }
+            }
+            
+            .submit-btn {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+                font-size: 36px;
+                margin-top: 15px;
+                background-color: var(--base-white);
+                color: var(--primary-primary);
+                border: 7px solid var(--primary-primary);
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+#token-line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EE1B84;
+
+    &.social-line {
+        background-color: #FFEF7A;
+    }
+
+    &.social-line::before {
+        border-color: #FFEF7A #FFEF7A transparent transparent;
+    }
+
+    .marquee-container {
+        overflow-x: hidden !important;
+        display: flex !important;
+        flex-direction: row !important;
+        position: relative;
+        width: 100%;
+    }
+    
+    .token-marquee {
+        flex: 0 0 auto;
+        min-width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        animation: token-marquee-animation 20s linear infinite;
+    
+        .token-item {
+            display: flex;
+            align-items: center;
+            display: inline-block;
+            font-family: "Chakra Petch", sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--base-black);
+            padding: 0 25px;
+        }
+    }
+    
+    @keyframes token-marquee-animation {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}

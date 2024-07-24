@@ -1,0 +1,59 @@
+@import url('https://fonts.cdnfonts.com/css/grobold');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --base-white: #fff;
+    --base-black: #000;
+
+    --primary-primary: #EE1B84;
+
+    --text-yellow: #FFEE64;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'GROBOLD', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--base-black);
+    color: var(--base-white);
+}
+
+/* Only PC, Laptop */
+@media (min-width: 1024.1px) {
+    .hide-on-pc {
+        display: none !important;
+    }
+}
+
+/* From tablet to higher */
+@media (min-width: 740px) {
+    .hide-from-tablet-higher {
+        display: none !important;
+    }
+}
+
+/* Mobile and Tablet */
+@media (max-width: 1024px) {
+    .hide-on-mobile-tablet {
+        display: none !important;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1024px) {
+    .hide-on-tablet {
+        display: none !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739.9px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
