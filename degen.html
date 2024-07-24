@@ -790,22 +790,44 @@
         
 
         // Mobile Responsive
+        // const connected = document.querySelector("#content a.x.connected");
+        // if (connected) {
+        //     const searchWrapper = document.querySelector(".search-responsive");
+        //     const contentOtherProfile = document.querySelector("#content .yp-body .anl-yp-btn, #content .op-body .anl-yp-btn");
+        //     const connectYour = document.querySelector("#header .inner .connects a.x");
+        //     const connectYoured = document.querySelector("#header .inner .connects a.x.connected");
+        //     const profileWrapper = document.querySelector(".profile-wrapper");
+        //     connected.addEventListener('click', () => {
+        //         profileWrapper.style.display = 'block';
+        //         connected.style.display = 'none';
+        //         contentOtherProfile.style.display = 'none';
+        //         connectYour.style.display = 'none';
+        //         connectYoured.style.display = 'inline';
+        //         searchWrapper.style.display = 'inline';
+        //     });
+        // }
+
+
         const connected = document.querySelector("#content a.x.connected");
         if (connected) {
-            const searchWrapper = document.querySelector(".search-responsive");
+            const searchWrapper = document.querySelector("#content .head-mb .search");
             const contentOtherProfile = document.querySelector("#content .yp-body .anl-yp-btn, #content .op-body .anl-yp-btn");
             const connectYour = document.querySelector("#header .inner .connects a.x");
             const connectYoured = document.querySelector("#header .inner .connects a.x.connected");
+            const content = document.querySelector("#content .yp-body .anl-yp-btn, #content .op-body .anl-yp-btn");
             const profileWrapper = document.querySelector(".profile-wrapper");
+
             connected.addEventListener('click', () => {
-                profileWrapper.style.display = 'block';
+                if (profileWrapper) profileWrapper.style.display = 'block';
                 connected.style.display = 'none';
-                contentOtherProfile.style.display = 'none';
-                connectYour.style.display = 'none';
-                connectYoured.style.display = 'inline';
-                searchWrapper.style.display = 'inline';
+                if (content) content.style.display = 'none';
+                if (connectYour) connectYour.style.display = 'none';
+                if (connectYoured) connectYoured.style.display = 'inline';
+                if (contentOtherProfile) contentOtherProfile.style.display = 'none';
+                if (searchWrapper) searchWrapper.style.display = 'block';
             });
         }
+
 
     </script>
 </body>
