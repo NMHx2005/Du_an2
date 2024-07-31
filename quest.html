@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest UI</title>
+    <link href="https://fonts.cdnfonts.com/css/grobold" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../munki/asset/css/pages/quest.css" />
+</head>
+<body>
+
+    <div class="quest-container">
+        <span class="close-button">&times;</span>
+        <div class="quest-title">
+            <a href="degen.html">
+                <img src="../munki/asset/images/quest.png" alt="Quest Icon">
+            </a>
+            Quest
+        </div>
+        <div class="quest-parent">
+            <div class="quest-item" data-toggle="collapse" data-target="#quest1-details">
+                <div class="quest-content">
+                    <img src="../munki/asset/images/Wallet.png" />
+                    <div>
+                        <div class="quest-content-1">Connect your Wallet</div>
+                        <div class="quest-content-2">+0.000 Degen Score</div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-check">Check</button>
+        </div>
+        <div id="quest1-details" class="collapse quest-details">
+            <div>+10000 Degen Score</div>
+            <div>Analyze the extra points you earn based on the number of meme coins</div>
+        </div>
+        <div class="quest-parent">
+            <div class="quest-item" data-toggle="collapse" data-target="#quest2-details">
+                <div class="quest-content">
+                    <img src="../munki/asset/images/TwitterX.png" />
+                    <div>
+                        <div class="quest-content-1">Like Our Post</div>
+                        <div class="quest-content-2">+0.000 Degen Score</div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-check">Check</button>
+        </div>
+        <div id="quest2-details" class="collapse quest-details">
+            <div>+10000 Degen Score</div>
+            <div>Analyze the extra points you earn based on the number of meme coins</div>
+        </div>
+        <div class="quest-parent">
+            <div class="quest-item" data-toggle="collapse" data-target="#quest3-details">
+                <div class="quest-content">
+                    <img src="../munki/asset/images/TwitterX.png" />
+                    <div>
+                        <div class="quest-content-1">Follow Our Channel</div>
+                        <div class="quest-content-2">+0.000 Degen Score</div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-check">Check</button>
+        </div>
+        <div id="quest3-details" class="collapse quest-details">
+            <div>+10000 Degen Score</div>
+            <div>Analyze the extra points you earn based on the number of meme coins</div>
+        </div>
+        <div class="quest-parent">
+            <div class="quest-item" data-toggle="collapse" data-target="#quest4-details">
+                <div class="quest-content">
+                    <img src="../munki/asset/images/TwitterX.png" />
+                    <div>
+                        <div class="quest-content-1">Comment on Our Post</div>
+                        <div class="quest-content-2">+0.000 Degen Score</div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-check">Check</button>
+        </div>
+        <div id="quest4-details" class="collapse quest-details">
+            <div>+10000 Degen Score</div>
+            <div>Analyze the extra points you earn based on the number of meme coins</div>
+        </div>
+        <div class="quest-parent">
+            <div class="quest-item" data-toggle="collapse" data-target="#quest5-details">
+                <div class="quest-content">
+                    <img src="../munki/asset/images/TwitterX.png" />
+                    <div>
+                        <div class="quest-content-1">Comment on Our Post</div>
+                        <div class="quest-content-2">+0.000 Degen Score</div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-check">Check</button>
+        </div>
+        <div id="quest5-details" class="collapse quest-details">
+            <div>+10000 Degen Score</div>
+            <div>Analyze the extra points you earn based on the number of meme coins</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.btn-check').click(function() {
+                $(this).toggleClass('checked');
+                if ($(this).hasClass('checked')) {
+                    $(this).html('&#10003;');
+                } else {
+                    $(this).html('Check');
+                }
+            });
+            
+            $('.close-button').click(function() {
+                $('.quest-container').hide();
+            });
+        });
+    </script>
+</body>
+</html>

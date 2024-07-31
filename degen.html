@@ -6,9 +6,10 @@
     <title>Degen Analyzer | Munki</title>
 
     <!-- BS5 -->
-    <!-- <link href="./asset/libs/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="./asset/libs/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Các thẻ meta, title và link CSS khác -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Base CSS -->
     <link rel="stylesheet" href="./asset/css/base.css">
 
@@ -23,6 +24,9 @@
     <link rel="stylesheet/less" href="./asset/css/pages/degen.less">
     <link rel="stylesheet/less" href="./asset/css/pages/responsive/degen-resp.less">
     <link rel="stylesheet/less" href="./asset/css/layout/layout.resp.less">
+    <link href="https://fonts.cdnfonts.com/css/grobold" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../munki/asset/css/pages/quest.css" />
     <script>
         less = {
           env: "development",
@@ -31,6 +35,101 @@
     <script src="./asset/libs/less.js-master/dist/less.min.js" type="text/javascript"></script>
 </head>
 <body>
+    <!-- Quest -->
+    <div class="Quest">
+        <div class="quest-container">
+            <span class="close-button">&times;</span>
+            <div class="quest-title">
+                <a href="quest.html">
+                    <img src="../munki/asset/images/quest.png" alt="Quest Icon">
+                </a>
+                Quest
+            </div>
+            <div class="quest-parent">
+                <div class="quest-item" data-toggle="collapse" data-target="#quest1-details">
+                    <div class="quest-content">
+                        <img src="../munki/asset/images/Wallet.png" />
+                        <div>
+                            <div class="quest-content-1">Connect your Wallet</div>
+                            <div class="quest-content-2">+0.000 Degen Score</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-check" onclick="toggleCheck(this)">Check</button>
+            </div>
+            <div id="quest1-details" class="collapse quest-details">
+                <div>+10000 Degen Score</div>
+                <div>Analyze the extra points you earn based on the number of meme coins</div>
+            </div>
+            <div class="quest-parent">
+                <div class="quest-item" data-toggle="collapse" data-target="#quest2-details">
+                    <div class="quest-content">
+                        <img src="../munki/asset/images/TwitterX.png" />
+                        <div>
+                            <div class="quest-content-1">Like Our Post</div>
+                            <div class="quest-content-2">+0.000 Degen Score</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-check">Check</button>
+            </div>
+            <div id="quest2-details" class="collapse quest-details">
+                <div>+10000 Degen Score</div>
+                <div>Analyze the extra points you earn based on the number of meme coins</div>
+            </div>
+            <div class="quest-parent">
+                <div class="quest-item" data-toggle="collapse" data-target="#quest3-details">
+                    <div class="quest-content">
+                        <img src="../munki/asset/images/TwitterX.png" />
+                        <div>
+                            <div class="quest-content-1">Follow Our Channel</div>
+                            <div class="quest-content-2">+0.000 Degen Score</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-check">Check</button>
+            </div>
+            <div id="quest3-details" class="collapse quest-details">
+                <div>+10000 Degen Score</div>
+                <div>Analyze the extra points you earn based on the number of meme coins</div>
+            </div>
+            <div class="quest-parent">
+                <div class="quest-item" data-toggle="collapse" data-target="#quest4-details">
+                    <div class="quest-content">
+                        <img src="../munki/asset/images/TwitterX.png" />
+                        <div>
+                            <div class="quest-content-1">Comment on Our Post</div>
+                            <div class="quest-content-2">+0.000 Degen Score</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-check">Check</button>
+            </div>
+            <div id="quest4-details" class="collapse quest-details">
+                <div>+10000 Degen Score</div>
+                <div>Analyze the extra points you earn based on the number of meme coins</div>
+            </div>
+            <div class="quest-parent">
+                <div class="quest-item" data-toggle="collapse" data-target="#quest5-details">
+                    <div class="quest-content">
+                        <img src="../munki/asset/images/TwitterX.png" />
+                        <div>
+                            <div class="quest-content-1">Comment on Our Post</div>
+                            <div class="quest-content-2">+0.000 Degen Score</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-check">Check</button>
+            </div>
+            <div id="quest5-details" class="collapse quest-details">
+                <div>+10000 Degen Score</div>
+                <div>Analyze the extra points you earn based on the number of meme coins</div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Let add class active with #modal -->
     <div id="modal" class="">
         <div class="modal-content">
@@ -57,38 +156,6 @@
             <button class="conn-btn">Connection your X</button>
         </div>
     </div>
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Accordion Item #1
-            </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              Accordion Item #2
-            </button>
-          </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-          </div>
-        </div>
-      </div>
     <div id="app">
         <header id="header">
             <div class="container">
@@ -765,82 +832,107 @@
         </div>
     </div>
 
+    <!-- Các thư viện JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Phiên bản đầy đủ của jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Các tập tin JavaScript tùy chỉnh của bạn -->
     <script src="./asset/js/layout.js"></script>
     <script src="./asset/libs/tabs/tab.js"></script>
 
+    <!-- Mã JavaScript tùy chỉnh của bạn -->
     <script>
-        let parent = '.head'
-        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        if (width < 1024) {
-            parent = '.head-mb'
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            let parent = window.innerWidth < 1024 ? '.head-mb' : '.head';
+
+            function listenSearch() {
+                const search = document.querySelector(parent + ' .search');
+                const input = document.querySelector(parent + ' .search input');
+                const output = document.querySelector(parent + ' .search-wrapper .search-output');
+                const svg2 = document.querySelector(parent + ' .search svg');
+                const span = document.querySelector(parent + ' .search span');
+
+                search.onclick = () => {
+                    svg2.style.marginLeft = '12px';
+                    span.style.display = 'none';
+                    input.style.display = 'inline-block';
+                    input.focus();
+
+                    input.onblur = () => {
+                        if (input.value === '') {
+                            input.style.display = 'none';
+                            svg2.style.display = 'inline-block';
+                            span.style.display = 'inline-block';
+                        }
+                    };
+
+                    input.oninput = () => {
+                        output.style.display = input.value ? 'block' : 'none';
+                    };
+                };
+            }
+
+            function handleResize() {
+                parent = window.innerWidth < 1024 ? '.head-mb' : '.head';
+                listenSearch();
+            }
+
+            listenSearch();
+            window.addEventListener('resize', handleResize);
+
+            // Mobile Responsive
+            const connected = document.querySelector("#content a.x.connected");
+            if (connected) {
+                const searchWrapper = document.querySelector("#content .head-mb .search");
+                const contentOtherProfile = document.querySelector("#content .yp-body .anl-yp-btn, #content .op-body .anl-yp-btn");
+                const connectYour = document.querySelector("#header .inner .connects a.x");
+                const connectYoured = document.querySelector("#header .inner .connects a.x.connected");
+                const content = document.querySelector("#content .yp-body .anl-yp-btn, #content .op-body .anl-yp-btn");
+                const profileWrapper = document.querySelector(".profile-wrapper");
+
+                connected.addEventListener('click', () => {
+                    if (profileWrapper) profileWrapper.style.display = 'block';
+                    connected.style.display = 'none';
+                    if (content) content.style.display = 'none';
+                    if (connectYour) connectYour.style.display = 'none';
+                    if (connectYoured) connectYoured.style.display = 'inline';
+                    if (contentOtherProfile) contentOtherProfile.style.display = 'none';
+                    if (searchWrapper) searchWrapper.style.display = 'block';
+                });
+            }
+        });
+        const close = document.querySelector(".close-button");
+        const quest = document.querySelector(".quest-container");
+        close.addEventListener('click', function() {
+            quest.style.display = 'none';
+        });
+        // Chọn tất cả các nút check
+        const checkButtons = document.querySelectorAll(".quest-parent .btn-check");
         
-        function listenSearch() {
-            const search = document.querySelector(parent + ' .search')
-            const input = document.querySelector(parent + ' .search input')
-            const output = document.querySelector(parent + ' .search-wrapper .search-output')
-            const svg2 = document.querySelector(parent + ' .search svg')
-            const span = document.querySelector(parent + ' .search span')
-
-            search.onclick = () => {
-                svg2.style.marginLeft = '12px'
-                span.style.display = 'none'
-
-                input.style.display = 'inline-block'
-                input.focus()
-
-                input.onblur = () => {
-                    if (input.value === '') {
-                        input.style.display = 'none'
-                        svg2.style.display = 'inline-block'
-                        span.style.display = 'inline-block'
-                    }
+        // Thêm sự kiện click cho mỗi nút
+        checkButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Chuyển đổi trạng thái giữa checked và không checked
+                button.classList.toggle('checked');
+                
+                // Thay đổi nội dung của nút
+                if (button.classList.contains('checked')) {
+                    button.innerHTML = '&#10003;'; // Dấu tích
+                } else {
+                    button.innerHTML = 'Check'; // Văn bản 'Check'
                 }
-
-                input.oninput = () => {
-                    if (input.value) {
-                        output.style.display = 'block'
-                    } else {
-                        output.style.display = 'none'
-                    }
-                }
-            }
-        }
-
-        listenSearch()
-
-        window.onresize = () => {
-            width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if (width < 1024) {
-                parent = '.head-mb'
-            } else {
-                parent = '.head'
-            }
-            listenSearch()
-        }
-
-        // Mobile Responsive
-        const connected = document.querySelector("#content a.x.connected");
-        if (connected) {
-            const searchWrapper = document.querySelector("#content .head-mb .search");
-            const contentOtherProfile = document.querySelector("#content .yp-body .anl-yp-btn, #content .op-body .anl-yp-btn");
-            const connectYour = document.querySelector("#header .inner .connects a.x");
-            const connectYoured = document.querySelector("#header .inner .connects a.x.connected");
-            const content = document.querySelector("#content .yp-body .anl-yp-btn, #content .op-body .anl-yp-btn");
-            const profileWrapper = document.querySelector(".profile-wrapper");
-
-            connected.addEventListener('click', () => {
-                if (profileWrapper) profileWrapper.style.display = 'block';
-                connected.style.display = 'none';
-                if (content) content.style.display = 'none';
-                if (connectYour) connectYour.style.display = 'none';
-                if (connectYoured) connectYoured.style.display = 'inline';
-                if (contentOtherProfile) contentOtherProfile.style.display = 'none';
-                if (searchWrapper) searchWrapper.style.display = 'block';
             });
+        });
+
+        function toggleCheck(button) {
+            // Toggle the 'checked' class on the button
+            button.classList.toggle('checked');
+            
+            // Change the innerHTML based on the presence of 'checked' class
+            button.innerHTML = button.classList.contains('checked') ? '&#10003;' : 'Check';
         }
-
-
     </script>
+    
 </body>
 </html>

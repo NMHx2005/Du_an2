@@ -1,0 +1,128 @@
+.Quest {
+    position: relative;
+}
+.quest-container {
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+    width: 941px;
+    font-family: 'GROBOLD', sans-serif;
+    margin: auto;
+    background: #000000A6;
+    position: absolute;
+    top: 370px;
+    left: 370px;
+    z-index: 999;
+}
+.quest-title {
+    font-weight: 500;
+    font-size: 48px;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+.quest-title img {
+    margin-right: 15px;
+}
+.quest-item {
+    border: 2px solid #ff4081;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    flex: 1;
+    height: 76px;
+}
+.quest-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.quest-parent .btn-check {
+    border: 2px solid #ff4081;
+    color: #FFEE64;
+    border-radius: 5px;
+    width: 76px;
+    height: 76px;
+    position: relative;
+    background-color: transparent;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    cursor: pointer !important; 
+}
+
+.quest-parent .btn-check.checked {
+    color: #28a745;
+    border-color: #28a745;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 36px;
+    font-size: 55px;
+    cursor: pointer;
+    color: #fff;
+}
+.quest-details {
+    border: 2px solid #ff4081;
+    border-radius: 12px;;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: #ffc107;
+    background: #000000CC;
+}
+.quest-details div:first-child {
+    color: #EE1B84;
+    font-weight: 500;
+    margin-bottom: 70px;
+    font-size: 20px;
+    text-align: center;
+}
+.quest-details div:last-child {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin-right: 112px;
+    margin-left: 112px;
+    margin-bottom: 112px;
+}
+.quest-content-1 {
+    color: #FFEE64;
+    font-size: 18px;
+    font-weight: 500;
+}
+.checked {
+    color: #FFEE64;
+    font-size: 18px;
+    font-weight: 500;
+}
+.quest-item .btn-check {
+    color: #FFEE64;
+    font-size: 18px;
+    font-weight: 500;
+}
+.quest-content {
+    display: flex;
+    align-items: center;
+}
+.quest-content img {
+    margin-right: 15px;
+}
+.quest-content-2 {
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+}
