@@ -23,7 +23,7 @@ body {
 }
 
 #content {
-    margin-top: 21px;
+    margin-top: 15px;
     position: relative;
     .connected {
         display: none;
@@ -56,6 +56,7 @@ body {
             .search-output {
                 display: none;
                 margin-top: 10px;
+                z-index: 2;
                 position: absolute;
                 width: 400px;
                 max-height: 300px;
@@ -163,6 +164,7 @@ body {
                 }
             }
         }
+
 
         .balance {
             display: flex;
@@ -437,9 +439,9 @@ body {
     }
 
     .abs-box-social {
-        position: absolute;
-        right: 10px;
-        bottom: 36px;
+        position: fixed;
+        right: 24px;
+        bottom: 100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -603,4 +605,10 @@ body {
 #content .yp-body .profile-wrapper .gray-box .myname-wrapper .center-content, #content .op-body .profile-wrapper .gray-box .myname-wrapper .center-content {
     border-top-right-radius: 38px;
     border-top-left-radius: 38px;
+}
+.btn-copy {
+    width: 24px;
+    height: 24px;
+    color: black;
+    background-color: white !important;
 }

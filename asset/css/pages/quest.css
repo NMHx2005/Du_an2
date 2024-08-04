@@ -130,75 +130,52 @@
 
 @media (max-width: 566.98px) {
     .quest-container {
-        width: 80%;
-        right: 20px;
+        width: 90%;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 20px;
         top: 280px;
-        left: 0;
+        left: 12px;
+        right: 12px;
         border-radius: 5px;
     }
     .quest-title {
-        font-size: 12px;
-        margin-bottom: 20px;
-        align-items: center;
+        font-size: 24px;
+        align-items: flex-end;
+        margin-bottom: 18px;
     }
-    .quest-title img {
-        width: 24px;
-        height: 24px;
-        margin-right: 10px;
-        margin-bottom: 10px;
+    .quest-title a img {
+        width: 30px;
     }
-    .quest-item {
-        padding: 10px;
-        height: auto;
-        font-size: 14px;
-        width: 100%;
-        display: flex;
+    .quest-content-1 {
+        font-size: 9px;
     }
-    .quest-parent {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .quest-parent .btn-check {
-        width: 100%;
-        height: 50px;
-        font-size: 14px;
-        margin-left: 0;
-        cursor: pointer !important;
-        margin-top: 10px;
-    }
-    .close-button {
-        top: 10px;
-        right: 20px;
-        font-size: 30px;
-    }
-    .quest-details {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        padding-top: 5px;
-    }
-    .quest-details div:first-child {
-        margin-bottom: 20px;
-        font-size: 16px;
-    }
-    .quest-details div:last-child {
-        font-size: 14px;
-        margin-right: 10px;
-        margin-left: 10px;
-        margin-bottom: 20px;
-    }
-    .quest-content-1, .quest-content-2 {
-        font-size: 8px;
-    }
-    .quest-content {
-        
-        align-items: center;
-        width: 100%;
+    .quest-content-2 {
+        font-size: 9px;
     }
     .quest-content img {
-        margin-right: 20px;
-        margin-bottom: 10px;
+        width: 23px;
+    }
+    .quest-item {
+        padding: 7.5px;
+        height: 38px;
+    }
+    .close-button {
+        top: -10px;
+        right: 10px;
+    }
+    .quest-parent .btn-check {
+        font-size: 9px;
+        height: 38px;
+    }
+    .quest-details div:first-child {
+        font-size: 10px;
+        margin-bottom: 30px;
+    }
+    .quest-details div:last-child {
+        font-size: 9px;
+        margin-bottom: 52px;
+        margin-right: 70px;
+        margin-left: 70px;
     }
 }
