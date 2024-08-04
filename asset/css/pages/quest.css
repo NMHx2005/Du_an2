@@ -128,6 +128,60 @@
 }
 
 
+@media (max-width: 1024px) {
+    .quest-container {
+        width: 80%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        top: 300px;
+        left: 10%;
+        right: 10%;
+        border-radius: 8px;
+    }
+    .quest-title {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+    .quest-title img {
+        width: 40px;
+    }
+    .quest-content-1 {
+        font-size: 14px;
+    }
+    .quest-content-2 {
+        font-size: 14px;
+    }
+    .quest-content img {
+        width: 30px;
+    }
+    .quest-item {
+        padding: 10px;
+        height: 50px;
+    }
+    .close-button {
+        top: 0;
+        right: 20px;
+        font-size: 40px;
+    }
+    .quest-parent .btn-check {
+        font-size: 14px;
+        height: 50px;
+    }
+    .quest-details div:first-child {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+    .quest-details div:last-child {
+        font-size: 14px;
+        margin-bottom: 70px;
+        margin-right: 90px;
+        margin-left: 90px;
+    }
+}
+
+
+
 @media (max-width: 566.98px) {
     .quest-container {
         width: 90%;

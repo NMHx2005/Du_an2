@@ -300,6 +300,11 @@ body {
                 .score-box {
                     padding: 30px;
                     height: 100%;
+                    .row {
+                        .col-4 {
+                            margin-left: -32px;
+                        }
+                    }
                     
                     .balance-container {
                         display: flex;
@@ -322,13 +327,31 @@ body {
 
                     .balance-num-wrapper {
                         height: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        margin-top: 64px;
+                        margin-left: 15px;
 
                         .val {
                             font-size: 26px;
                             color: var(--text-yellow);
+                            margin-left: 32px;
+                            margin-bottom: 15px;
+                        }
+                        .button-goost {
+
+                            button {
+                                display: flex;
+                                align-items: center;
+                                border-radius: 999px;
+                                background: #FFEE64;
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: #EE1B84;
+                                border: 0;
+                                padding: 12px 38px;
+                                img {
+                                    margin-left: 6px;
+                                }
+                            }
                         }
                     }
                 }
