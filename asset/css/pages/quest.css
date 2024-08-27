@@ -1,5 +1,8 @@
 .Quest {
     position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 .quest-container {
     border: 2px solid #ffc107;
@@ -13,7 +16,7 @@
     background: #000000A6;
     position: absolute;
     top: 500px;
-    left: 370px;
+    left: 22%;
     z-index: 999;
 }
 .quest-title {
