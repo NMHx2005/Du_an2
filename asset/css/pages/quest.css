@@ -234,7 +234,6 @@
 }
 .analyzeAgain .button {
     padding: 15px 50px;
-    margin-left: 32%;
     background: #EE1B84;
     color: var(--text-yellow);
     border: none;
@@ -242,7 +241,9 @@
     border-radius: 999px;
     margin-bottom: 50px;
 }
-
+.button-parent {
+    text-align: center;
+}
 
 @media (max-width: 1024px) {
     .quest-container {
