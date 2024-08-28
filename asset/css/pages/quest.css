@@ -14,10 +14,15 @@
     font-family: 'GROBOLD', sans-serif;
     margin: auto;
     background: #000000A6;
-    position: absolute;
-    top: 500px;
-    left: 22%;
+    /* position: absolute; */
+    /* top: 500px;
+    left: 17%; */
+    /* top: 500px; */
     z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 80%);
 }
 .quest-title {
     font-weight: 500;
@@ -248,15 +253,72 @@
     text-align: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 991.98px) {
+    .noitice {
+        background: #000000A6;
+        width: 40%;
+        border-radius: 20px;
+        border: 4px solid #FFEF7A;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 400%);
+        display: none;
+    }
+    .warringAgain {
+        position: relative;
+        z-index: 999;
+    }
+    .analyzeAgain {
+        align-self: center;
+        position: relative;
+        z-index: 999;
+    }
+    .analyzeAgain .title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        color: #FFFFFF;
+        margin-top: 70px;
+        margin-bottom: 40px;
+    }
+    .analyzeAgain i {
+        color: white;
+        font-size: 24px;
+        position: absolute;
+        right: 15px;
+        top: -60px;
+        cursor: pointer;
+    }
+    .analyzeAgain .desc {
+        margin-bottom: 40px;
+        font-weight: 400;
+        font-size: 8px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .analyzeAgain .button {
+        padding: 15px 50px;
+        background: #EE1B84;
+        color: var(--text-yellow);
+        border: none;
+        font-size: 16px;
+        border-radius: 999px;
+        margin-bottom: 50px;
+    }
+    .button-parent {
+        text-align: center;
+    }
+    
     .quest-container {
         width: 80%;
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 30px;
-        top: 300px;
-        left: 10%;
-        right: 10%;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, 80%);
         border-radius: 8px;
     }
     .quest-title {
@@ -298,19 +360,124 @@
         margin-right: 90px;
         margin-left: 90px;
     }
+    .content-percent {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, 80%);
+        display: none;
+        z-index: 999;
+        width: 50%;
+        border: 3px solid #FFEF7A;
+        padding: 12px 24px;
+        border-radius: 20px;
+        background: #000000CC;
+    }
+    .content-percent .item {
+        display: flex;
+        
+        align-items: center;
+    }
+    .content-percent .percentage-1 {
+        color: #9611FF;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .content-percent .percentage-2 {
+        color: #FFBF11;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .content-percent .percentage-3 {
+        color: #F12178;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .content-percent .percentage-4 {
+        color: #56FFFF;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .content-percent .percentage-5 {
+        color:#77EF58;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .content-percent .item img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .content-percent .item p {
+        font-weight: 500;
+        font-size: 12px;
+        color: white;
+        padding-top: 12px;
+        margin-right: 10px;
+    }
+    .content-percent .group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 
 
 @media (max-width: 566.98px) {
+    .content-percent .percentage-1 {
+        color: #9611FF;
+        font-weight: 500;
+        font-size: 8px;
+    }
+    .content-percent .percentage-2 {
+        color: #FFBF11;
+        font-weight: 500;
+        font-size: 8px;
+    }
+    .content-percent .percentage-3 {
+        color: #F12178;
+        font-weight: 500;
+        font-size: 8px;
+    }
+    .content-percent .percentage-4 {
+        color: #56FFFF;
+        font-weight: 500;
+        font-size: 8px;
+    }
+    .content-percent .percentage-5 {
+        color:#77EF58;
+        font-weight: 500;
+        font-size: 8px;
+    }
+    .content-percent .item img {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .content-percent .item p {
+        font-weight: 500;
+        font-size: 8px;
+        color: white;
+        padding-top: 12px;
+        margin-right: 10px;
+    }
+    .content-percent .group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .quest-container {
         width: 90%;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 20px;
-        top: 280px;
-        left: 12px;
-        right: 12px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, 80%);
         border-radius: 5px;
     }
     .quest-title {
