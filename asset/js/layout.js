@@ -54,21 +54,29 @@ document.addEventListener("DOMContentLoaded", function() {
     const buttonBoost = document.querySelector("#content .yp-body .profile-wrapper .gray-box .types-box .top-left button");
     const contentPercent = document.querySelector(".detail-percent .content-percent");
 
-    if(buttonBoost && contentPercent) {
-        // Khi nhấn vào buttonBoost, hiển thị contentPercent
-        buttonBoost.onclick = (event) => {
+    if (buttonBoost && contentPercent) {
+        // Khi hover vào buttonBoost, hiển thị contentPercent
+        buttonBoost.addEventListener('mouseenter', () => {
             contentPercent.style.display = 'block';
-            event.stopPropagation(); // Ngăn không cho sự kiện click lan ra ngoài
-        }
+        });
 
-        // Khi nhấn vào bất kỳ nơi nào khác trên document, ẩn contentPercent
-        document.addEventListener('click', (event) => {
-            if (!contentPercent.contains(event.target)) {
-                contentPercent.style.display = 'none';
-            }
+        // Khi rời khỏi buttonBoost, ẩn contentPercent
+        buttonBoost.addEventListener('mouseleave', () => {
+            contentPercent.style.display = 'none';
+        });
+
+        // Để đảm bảo rằng contentPercent không bị ẩn khi di chuột qua nó
+        contentPercent.addEventListener('mouseenter', () => {
+            contentPercent.style.display = 'block';
+        });
+
+        // Khi rời khỏi contentPercent, ẩn nó
+        contentPercent.addEventListener('mouseleave', () => {
+            contentPercent.style.display = 'none';
         });
     }
 });
+
 
 
 
@@ -195,22 +203,18 @@ document.addEventListener('click', function(event) {
 
 
 
-
-const buttonGost = document.querySelector(".button-goost");
+const buttonGost = document.querySelector(".button-goost button");
 if(buttonGost) {
+    console.log(buttonGost);
     const quest = document.querySelector(".Quest");
     if(buttonGost && quest) {
-        // Khi nhấn vào buttonGost, hiển thị quest
+        // Khi nhấn vào buttonGost, chuyển đổi trạng thái hiển thị của quest
         buttonGost.onclick = (event) => {
-            quest.style.display = 'block';
-            event.stopPropagation(); // Ngăn không cho sự kiện click lan ra ngoài
-        }
-
-        // Khi nhấn vào bất kỳ nơi nào khác trên document, ẩn contentPercent
-        document.addEventListener('click', (event) => {
-            if (!quest.contains(event.target)) {
+            if (quest.style.display === 'block') {
                 quest.style.display = 'none';
+            } else {
+                quest.style.display = 'block';
             }
-        });
+        }
     }
 }

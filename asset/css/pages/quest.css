@@ -15,15 +15,11 @@
     margin: auto;
     background: #000000A6;
     backdrop-filter: blur(5px);
-    /* position: absolute; */
-    /* top: 500px;
-    left: 17%; */
-    /* top: 500px; */
     z-index: 999;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 80%);
+    transform: translate(-50%, -50%);
 }
 .quest-title {
     font-weight: 500;
@@ -195,7 +191,7 @@
     margin-right: 10px;
 }
 .content-percent .group {
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: space-between;
 }
