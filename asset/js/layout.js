@@ -218,3 +218,17 @@ if(buttonGost) {
         }
     }
 }
+const questContainer = document.querySelector(".quest-container");
+const closeButton = document.querySelector(".close-button");
+
+if (buttonGost && questContainer && closeButton) {
+    // Khi nhấn vào buttonGost, hiển thị hoặc ẩn questContainer
+    buttonGost.addEventListener('click', () => {
+        questContainer.style.display = 'block';
+    });
+
+    // Khi nhấn vào closeButton, ẩn questContainer
+    closeButton.addEventListener('click', () => {
+        questContainer.style.display = 'none';
+    });
+}
