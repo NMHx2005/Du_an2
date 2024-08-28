@@ -51,7 +51,7 @@ window.onload = fillProgressBars;
 
   
 document.addEventListener("DOMContentLoaded", function() {
-    const buttonBoost = document.querySelector("#content .yp-body .profile-wrapper .gray-box .score-box .balance-num-wrapper .button-goost button, #content .op-body .profile-wrapper .gray-box .score-box .balance-num-wrapper .button-goost button");
+    const buttonBoost = document.querySelector("#content .yp-body .profile-wrapper .gray-box .types-box .top-left button");
     const contentPercent = document.querySelector(".detail-percent .content-percent");
 
     if(buttonBoost && contentPercent) {
@@ -192,3 +192,25 @@ document.addEventListener('click', function(event) {
         degenContainer.style.display = "none";
     }
 });
+
+
+
+
+const buttonGost = document.querySelector(".button-goost");
+if(buttonGost) {
+    const quest = document.querySelector(".Quest");
+    if(buttonGost && quest) {
+        // Khi nhấn vào buttonGost, hiển thị quest
+        buttonGost.onclick = (event) => {
+            quest.style.display = 'block';
+            event.stopPropagation(); // Ngăn không cho sự kiện click lan ra ngoài
+        }
+
+        // Khi nhấn vào bất kỳ nơi nào khác trên document, ẩn contentPercent
+        document.addEventListener('click', (event) => {
+            if (!quest.contains(event.target)) {
+                quest.style.display = 'none';
+            }
+        });
+    }
+}

@@ -47,12 +47,13 @@
         }
 
         .abs-box-social {
-            position: absolute;
-            right: 0;
-            bottom: 60px;
+            position: fixed;
+            right: 24px;
+            bottom: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            z-index: 999;
 
             a {
                 width: 48px;
@@ -310,9 +311,14 @@
     }
 }
 
+
 #social {
-    margin-top: 88px;
-    padding-bottom: 100px;
+    // position: fixed;
+    // right: 24px;
+    // bottom: 100px;
+    // display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .inner {
         display: flex;
