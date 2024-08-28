@@ -401,6 +401,7 @@
                         }
                         .right {
                             text-align: center;
+                            padding: 0;
                             .right-1 {
                                 margin-bottom: 20px;
                             }
@@ -1462,7 +1463,7 @@
 }
 
 /* Mobile */
-@media (max-width: 576.98px) {
+@media (max-width: 575.98px) {
     .search-wrapper {
         display: none;
         width: 70% !important;
@@ -1566,13 +1567,13 @@
     #content .yp-body .profile-wrapper .gray-box .types-box .types .type-list .type-item, #content .op-body .profile-wrapper .gray-box .types-box .types .type-list .type-item {
         font-size: 9px;
     }
-    #content .yp-body .profile-wrapper .gray-box .types-box .types .type-list .type-item svg, #content .op-body .profile-wrapper .gray-box .types-box .types .type-list .type-item svg {
+    #content .yp-body .profile-wrapper .gray-box .types-box .types .type-list .type-item svg{
         width: 9px;
     }
-    #content .yp-body .profile-wrapper .gray-box .types-box .types, #content .op-body .profile-wrapper .gray-box .types-box .types {
+    #content .yp-body .profile-wrapper .gray-box .types-box .types {
         padding: 0;
     }
-    #content .yp-body .profile-wrapper .gray-box .types-box, #content .op-body .profile-wrapper .gray-box .types-box {
+    #content .yp-body .profile-wrapper .gray-box .types-box {
         padding: 12px 15px;
         width: 100%;
     }
@@ -1606,7 +1607,8 @@
         width: 40%;
     }
     #content .yp-body .profile-wrapper .gray-box .types-box svg, #content .op-body .profile-wrapper .gray-box .types-box svg {
-        width: 105px;
+        width: 137px;
+        height: 137px;
     }
     #content .yp-body .profile-wrapper .gray-box .ptype-item .ptype-content .part.pink, #content .op-body .profile-wrapper .gray-box .ptype-item .ptype-content .part.pink {
         font-size: 9px;
@@ -1640,15 +1642,14 @@
     }
 
     #content .yp-body .profile-wrapper .ptype-item .content .noacctive {
-        font-size: 6px;
+        font-size: 9px;
     }
     #content .yp-body .profile-wrapper .ptype-item .content .left {
-        font-size: 6px;
+        font-size: 9px;
     }
-
-
-
-
+    #content .yp-body .profile-wrapper .ptype-item .item, #content .op-body .profile-wrapper .ptype-item .item {
+        margin-top: 0;
+    }
 
     #content .yp-body .profile-wrapper .gray-box .myname-wrapper {
         flex-wrap: wrap;
@@ -1659,10 +1660,11 @@
         height: 108px;
     }
     #content .yp-body .profile-wrapper .gray-box .myname-wrapper .top-text-name {
-        font-size: 12px;
+        font-size: 13px;
         margin-bottom: 6px;
         padding: 0;
         height: auto;
+        width: 100%;
     }
     #content .yp-body .profile-wrapper .gray-box .myname-wrapper .content {
         font-size: 14px;
