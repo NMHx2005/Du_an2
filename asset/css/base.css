@@ -24,6 +24,13 @@ body {
     color: var(--base-white);
 }
 
+/* PC */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
 /* Only PC, Laptop */
 @media (min-width: 1024.1px) {
     .hide-on-pc {

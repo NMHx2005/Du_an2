@@ -38,7 +38,7 @@ body {
             align-items: center;
 
             .tab {
-                font-size: 16px;
+                font-size: 20px;
                 color: #fff;
                 padding: 12px 32px;
 
@@ -244,8 +244,9 @@ body {
             
             // Box 4
             .ptype-item {
+                padding: 25px 30px;
                 .title {
-                    font-size: 12px;
+                    font-size: 18px;
                     color: var(--text-yellow);
                     margin-bottom: 10px;
 
@@ -257,14 +258,13 @@ body {
                     align-items: center;
                     border: 2.7px solid #FFFFFF;
                     border-radius: 899.1px;
-                    // padding: 8px 16px;
                     background: #727272;
                     color: white;
                     font-weight: 500;
                     cursor: pointer;
                     margin-bottom: 30px;
                     .left {
-                        font-size: 10px;
+                        font-size: 14px;
                     }
                     .acctive {
                         color: var(--text-yellow);
@@ -273,7 +273,7 @@ body {
                         border-radius: 899.1px;
                     }
                     .right {
-                        font-size: 10px;
+                        font-size: 14px;
                     }
                     .noacctive {
                         padding-right: 16px;
@@ -282,9 +282,9 @@ body {
                         padding-left: 16px;
                     }
                 }
-                .gray-box {
-                    padding: 25px 30px;
-                }
+                // .gray-box {
+                //     padding: 25px 30px;
+                // }
                 .content-2 {
                     width: 70%;
                 }
@@ -297,16 +297,17 @@ body {
 
 
                 .item {
-                    margin-top: 15px;
+                    
                     .title-right {
                         color: #FFEE64;
-                        font-size: 16px;
+                        font-size: 20px;
                         font-weight: 500;
                         margin-bottom: 15px;
+                        padding-top: 15px;
                     }
                     .content-right {
                         color: white;
-                        font-size: 12px;
+                        font-size: 16px;
                         margin-bottom: 20px;
                     }
                 }
@@ -317,12 +318,12 @@ body {
                 width: 100%;
                 border-radius: 20px;
                 background-color: #4E4E4E;
-
                 .top-text {
-                    font-size: 28px;
+                    font-size: 32px;
+                    text-align: center;
                     color: var(--text-yellow);
                     margin: 0;
-                    margin-bottom: 20px;
+                    margin-bottom: 14px;
                 }
 
                 &.no-fixed-height {
@@ -350,8 +351,9 @@ body {
 
                     .content {
                         font-weight: 500;
-                        font-size: 24px;
+                        font-size: 28px;
                         color: #EE1B84;
+                        text-align: center;
                         margin-top: 20px;
                         span {
                             color: var(--text-yellow);
@@ -417,25 +419,25 @@ body {
                             position: absolute;
                             font-size: 24px;
                             top: 0px;
-                            right: -50px;
+                            right: -24px;
                             color: var(--text-yellow);
                         }
                     }
                     .right {
                         text-align: center;
                         .right-1 {
-                            margin-bottom: 20px;
+                            margin-bottom: 10px;
                         }
                         .right-title {
                             color: #FFEE64;
                             font-weight: 500;
-                            font-size: 16px;
+                            font-size: 18px;
                             margin-bottom: 10px;
                         }   
                         .right-content {
                             color: white;
-                            font-size: 12px;
-
+                            font-size: 14px;
+                            margin-bottom: 10px;
                         }
                     }
                     
@@ -451,6 +453,11 @@ body {
 
                 // Box3
                 .score-box {
+                    .title-top-text {
+                        .val {
+                            display: none;
+                        }
+                    }
                     padding: 26px 30px;
                     height: 100%;
                     .row {
@@ -467,8 +474,14 @@ body {
                         border-radius: 12px;
                         border: 3px solid var(--primary-primary);
                         background-color: white;
-                        margin-left: 20px;
-
+                        
+                        .balance-value-mobile {
+                            display: none;
+                            margin-top: auto;
+                            height: 100%;
+                            border-radius: 12px;
+                            background-color: var(--text-yellow);
+                        }
                         .balance-value {
                             margin-top: auto;
                             width: 100%;
@@ -486,7 +499,7 @@ body {
                             font-size: 26px;
                             color: #EE1B84;
                             margin-left: 32px;
-                            margin-bottom: 15px;
+                            margin-bottom: 30px;
                         }
                         .button-goost {
 
@@ -577,6 +590,7 @@ body {
                     .title {
                         color: var(--text-yellow);
                         margin-left: 10px;
+                        font-size: 16px;
                     }
                 }
                 .content-bottom {
@@ -586,7 +600,7 @@ body {
 
                     .content-info {
                         font-weight: 500;
-                        font-size: 16px;
+                        font-size: 20px;
                         color: var(--text-yellow);
                     }
                 }
@@ -785,4 +799,27 @@ body {
     height: 24px;
     color: black;
     background-color: white !important;
+}
+
+
+
+
+// Referral Code
+.referralCode {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 8px;
+    padding: 6px 64px;
+    border: 1.75px solid #EE1B84;
+    border-radius: 499.5px;
+    cursor: pointer;
+    .title {
+        color: var(--text-yellow);
+        margin-left: 5px;
+    }
+
 }

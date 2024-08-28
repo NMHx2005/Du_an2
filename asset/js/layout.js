@@ -17,26 +17,37 @@ mbnavBtn.onclick = () => {
     barsContent.classList.toggle('active')
 }
 
-
-function fillProgressBar() {
-    const fill = document.querySelector('.balance-value');
+function fillProgressBars() {
+    const fillHeight = document.querySelector('.balance-value');
+    const fillWidth = document.querySelector('.balance-value-mobile');
     const valElement = document.querySelector('.val');
-    let height = 0;
-    let currentVal = 0;
     const targetVal = 69420;
+
+    let height = 0;
+    let width = 0;
+    let currentVal = 0;
+
     const interval = setInterval(() => {
-        if (height >= 80) {
+        if (height >= 80 && width >= 80) {
             clearInterval(interval);
         } else {
-            height++;
-            currentVal = Math.floor((targetVal / 80) * height);
-            fill.style.height = height + '%';
+            if (height < 80) {
+                height++;
+                currentVal = Math.floor((targetVal / 80) * height);
+                fillHeight.style.height = height + '%';
+            }
+            if (width < 80) {
+                width++;
+                currentVal = Math.floor((targetVal / 80) * width);
+                fillWidth.style.width = width + '%';
+            }
             valElement.textContent = currentVal;
         }
     }, 100);
 }
 
-window.onload = fillProgressBar;
+window.onload = fillProgressBars;
+
 
   
 document.addEventListener("DOMContentLoaded", function() {
