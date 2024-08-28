@@ -313,10 +313,6 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 30px;
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, 80%);
         border-radius: 8px;
     }
     .quest-title {
@@ -472,10 +468,6 @@
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 20px;
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, 80%);
         border-radius: 5px;
     }
     .quest-title {
