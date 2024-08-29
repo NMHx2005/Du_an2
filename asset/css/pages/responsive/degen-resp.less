@@ -526,7 +526,7 @@
                     .head {
                         display: flex;
                         flex-wrap: wrap;
-                        justify-content: center;
+                        // justify-content: center;
                         margin-bottom: 35px;
                     }
                     .head-title {
@@ -1508,8 +1508,11 @@
             border-radius: 499.5px;
         }
     }
+    #header .inner .connects a.x.connected {
+        border: 1px solid var(--primary-primary);
+    }
     #header .inner .connects a.wl {
-        border: 1px;
+        border: 1px solid var(--primary-primary);
     }
     #header .inner .connects a.x.connected {
         display: none;
@@ -1519,6 +1522,10 @@
     }
     #content .yp-body .profile-wrapper .analysis, #content .op-body .profile-wrapper .analysis {
         margin-top: 27px;
+        padding: 12px 15px;
+    }
+    #content .yp-body .profile-wrapper .analysis .head {
+        margin-bottom: 15px;
     }
     .profile-wrapper {
         display: none;
@@ -1640,6 +1647,10 @@
         padding: 2px 4px;
         margin-left: 12px;
     }
+    #content .yp-body .profile-wrapper .gray-box .score-box .balance-num-wrapper .button-goost button svg {
+        width: 8px;
+        height: 8px;
+    }
     #content .yp-body .profile-wrapper .gray-box .score-box .balance-num-wrapper .val, #content .op-body .profile-wrapper .gray-box .score-box .balance-num-wrapper .val {
         margin-left: 12px;
     }
@@ -1683,5 +1694,8 @@
     #content .yp-body .profile-wrapper .ptype-item .item .title-right {
         font-size: 10px;
 
+    }
+    #content .yp-body .profile-wrapper .analysis .head-title {
+        margin-bottom: 0;
     }
 }
