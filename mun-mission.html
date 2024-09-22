@@ -13,9 +13,11 @@
     <!-- Page CSS -->
     <link rel="stylesheet/less" href="./asset/css/layout/layout.less">
     <link rel="stylesheet/less" href="./asset/css/pages/responsive/index-responsive.less">
+    <link rel="stylesheet/less" href="./asset/css/pages/responsive/degen-resp.less">
     <link rel="stylesheet/less" href="./asset/css/layout/layout.resp.less">
     <link rel="stylesheet/less" href="./asset/css/pages/meme-generator.less">
     <link rel="stylesheet/less" href="./asset/css/pages/mun-mission.less">
+    <link rel="stylesheet/less" href="./asset/css/pages/responsive/mun-mission.resp.less">
     <script>
         less = {
           env: "development",
@@ -36,7 +38,8 @@
                     </button>
                     <div class="bars-content">
                         <a href="./index.html" class="bars-link">Home</a>
-                        <a href="./degen.html" class="bars-link active">Degen Analyzer</a>
+                        <a href="./degen.html" class="bars-link">Degen Analyzer</a>
+                        <a href="./mun-mission.html" class="bars-link active">Mun Mission</a>
                     </div>
                 </div>
                 <a href="./index.html" class="nav-item home hide-on-mobile-tablet nonhomenoacctive">Home</a>
@@ -86,8 +89,8 @@
             </div>
             <div class="">
                 <div class="mun__section-1">
-                    <div class="referral-box d-flex justify-content-between align-items-center">
-                        <div>
+                    <div class="referral-box d-flex  align-items-center">
+                        <div class="content">
                             <div class="top">
                                 <div class="referral-content d-flex align-items-center">
                                     <span class="referral-icon">
@@ -102,7 +105,7 @@
                                             </defs>
                                         </svg>
                                     </span>
-                                    <div class="referral-text ms-2">
+                                    <div class="referral-text">
                                         <strong>Referrals: 18</strong><br>
                                     </div>
                                 </div>                                
@@ -116,7 +119,7 @@
                     <div class="score-section">
                         <h2 class="score-title">Degen Score</h2>
                   
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex score">
                           <div class="score-box">
                             <div class="score-card">
                               <strong>Base Score:</strong> 
@@ -151,9 +154,31 @@
                             </div>
                             <button class="check" data-check-id="quest1">Check</button>
                         </div>
-                        <div id="quest1-details" class="quest-details">
-                            <div>+10000 Degen Score</div>
-                            <div>Analyze the extra points you earn based on the number of meme coins</div>
+                        <div id="quest1-details" class="" style="display: none;">
+                            <div class="notion">
+                                <div class="box">
+                                    <div class="card custom-card text-center">
+                                        <h2 class="card-title custom-title">Comment on Our Post with Hashtag: TOTHEMUN, MUNKI, MUN</h2>
+                                        <h4 class="text-pink">+10000 Degen Score</h4>
+                                        <p class="card-text">Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div style="display: flex; justify-content: center;">
+                                            <div class="parent">
+                                                <button class="button">Go to 
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <rect width="24" height="24" fill="url(#pattern0_145_720)"/>
+                                                        <defs>
+                                                        <pattern id="pattern0_145_720" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_145_720" transform="scale(0.02)"/>
+                                                        </pattern>
+                                                        <image id="image0_145_720" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADVklEQVR4nO2ZW4hNYRTH92BoBk2GiTSajpLJSMmQW+ZhyqgpHo6paR4wT1LCg9sDmnJ5wINCcikZDygJD5RQFClqJsolt0Ru4zZyv8xPX7PPtFrnts8+e5+90/7XeTn/71tr/fc53/r+Zx3LihAhQoT/BsAMoMnha76HeQcAcRU/lq+QPzjHYo+E7FVxbwKl+QbdloOQT0BVnvnWqZhPgJF5ibADDwQ6cxBzCShymWsh8Fc9mIl5ixAJaoDvIsE9oETwB5SYFS5yTAW+ihi/gHrPRIhE61WxuwQ3GHgoOCO6JofYMeCN2N8DLPJchJ2sH3BFJWsQ/CzVGG4BxQ7ilgP31UNq80WESDoW+CwSPgeGCX6nKmijg/NnzpTEMbdnLFcxy1Tiw4IbBNwW3G/z3U8TpwhoV7Gumhi+ixAFnFMFxAU/GfgpuLuyMYh1m1UM00DKCyJCFDEaeC+KeCt7PbBJFblD7V+i+C5gXEFFiGJaVDGnlcW4IThzN9TZXB3wQ3W4mYGISAA4ocT0tUygGvimbuhpwAfV+VqsoAGMAF6Jwj4CYwS/UgnVvm2NFRYAc+0nm8DFRPu07x7dXhM4ZIUNwEFV5HLBVQHdij9vzpEVNpBsUYxnGi/4ViXklBVWkMWiACeVmGYrrCDZomwQXAXwOl1jCBVIbVFqBb9ACb1QEF/lBkCjKvaO9E/AUcUvtcIGYCjQQTK2izVlwDPBfQnMnqQC0B84Q2r0WRR7bb26e66Z/VYYAOxTxXcoi/IYGCLW71Hr1waroLeo1aqop8YNA6vU+/vFnlLggeCMkZwUpIi4mnx0JyYftkW5rMQ0ir3T1d3TaX41BiGi1j6saScfQKVyvC+B4YLfqoRuKbSImLrgetJNGjNZFHP72y4gAfPpzi6UiDL7fnA8+chkUYAJam72SDYGv0QU21Zd4ni2GzqNRanMMCrd7ffg4YjbyUcmi5JmbjbPLyFtqhDzFajIMUZ7OotC77mTc7MXcm7mlYhmdRu/c2MtslkUkudm7V6KmOPl5COTRSH13KzJCxHVfkw+zGHGObqAUflOSeRPWM88kW1R9PA6E866TVQCXPdz8gFMsd2AU7S6SRJTf0bG/Zh82JNHp3+4NnidP0KECBGsQPAP0VYCE3AyK7wAAAAASUVORK5CYII="/>
+                                                        </defs>
+                                                        </svg>                                        
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
                         </div>
                     
                         <!-- Quest 2 -->
@@ -170,9 +195,31 @@
                             </div>
                             <button class="check" data-check-id="quest2">&#10003;</button>
                         </div>
-                        <div id="quest2-details" class="quest-details">
-                            <div>+10000 Degen Score</div>
-                            <div>Analyze the extra points you earn based on the number of meme coins</div>
+                        <div id="quest2-details" class="" style="display: none;">
+                            <div class="notion">
+                                <div class="box">
+                                    <div class="card custom-card text-center">
+                                        <h2 class="card-title custom-title">Comment on Our Post with Hashtag: TOTHEMUN, MUNKI, MUN</h2>
+                                        <h4 class="text-pink">+10000 Degen Score</h4>
+                                        <p class="card-text">Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div style="display: flex; justify-content: center;">
+                                            <div class="parent">
+                                                <button class="button">Go to 
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <rect width="24" height="24" fill="url(#pattern0_145_720)"/>
+                                                        <defs>
+                                                        <pattern id="pattern0_145_720" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_145_720" transform="scale(0.02)"/>
+                                                        </pattern>
+                                                        <image id="image0_145_720" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADVklEQVR4nO2ZW4hNYRTH92BoBk2GiTSajpLJSMmQW+ZhyqgpHo6paR4wT1LCg9sDmnJ5wINCcikZDygJD5RQFClqJsolt0Ru4zZyv8xPX7PPtFrnts8+e5+90/7XeTn/71tr/fc53/r+Zx3LihAhQoT/BsAMoMnha76HeQcAcRU/lq+QPzjHYo+E7FVxbwKl+QbdloOQT0BVnvnWqZhPgJF5ibADDwQ6cxBzCShymWsh8Fc9mIl5ixAJaoDvIsE9oETwB5SYFS5yTAW+ihi/gHrPRIhE61WxuwQ3GHgoOCO6JofYMeCN2N8DLPJchJ2sH3BFJWsQ/CzVGG4BxQ7ilgP31UNq80WESDoW+CwSPgeGCX6nKmijg/NnzpTEMbdnLFcxy1Tiw4IbBNwW3G/z3U8TpwhoV7Gumhi+ixAFnFMFxAU/GfgpuLuyMYh1m1UM00DKCyJCFDEaeC+KeCt7PbBJFblD7V+i+C5gXEFFiGJaVDGnlcW4IThzN9TZXB3wQ3W4mYGISAA4ocT0tUygGvimbuhpwAfV+VqsoAGMAF6Jwj4CYwS/UgnVvm2NFRYAc+0nm8DFRPu07x7dXhM4ZIUNwEFV5HLBVQHdij9vzpEVNpBsUYxnGi/4ViXklBVWkMWiACeVmGYrrCDZomwQXAXwOl1jCBVIbVFqBb9ACb1QEF/lBkCjKvaO9E/AUcUvtcIGYCjQQTK2izVlwDPBfQnMnqQC0B84Q2r0WRR7bb26e66Z/VYYAOxTxXcoi/IYGCLW71Hr1waroLeo1aqop8YNA6vU+/vFnlLggeCMkZwUpIi4mnx0JyYftkW5rMQ0ir3T1d3TaX41BiGi1j6saScfQKVyvC+B4YLfqoRuKbSImLrgetJNGjNZFHP72y4gAfPpzi6UiDL7fnA8+chkUYAJam72SDYGv0QU21Zd4ni2GzqNRanMMCrd7ffg4YjbyUcmi5JmbjbPLyFtqhDzFajIMUZ7OotC77mTc7MXcm7mlYhmdRu/c2MtslkUkudm7V6KmOPl5COTRSH13KzJCxHVfkw+zGHGObqAUflOSeRPWM88kW1R9PA6E866TVQCXPdz8gFMsd2AU7S6SRJTf0bG/Zh82JNHp3+4NnidP0KECBGsQPAP0VYCE3AyK7wAAAAASUVORK5CYII="/>
+                                                        </defs>
+                                                        </svg>                                        
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
                         </div>
                     
                         <!-- Quest 3 -->
@@ -189,9 +236,31 @@
                             </div>
                             <button class="check" data-check-id="quest3">Check</button>
                         </div>
-                        <div id="quest3-details" class="quest-details">
-                            <div>+10000 Degen Score</div>
-                            <div>Analyze the extra points you earn based on the number of meme coins</div>
+                        <div id="quest3-details" class="" style="display: none;">
+                            <div class="notion">
+                                <div class="box">
+                                    <div class="card custom-card text-center">
+                                        <h2 class="card-title custom-title">Comment on Our Post with Hashtag: TOTHEMUN, MUNKI, MUN</h2>
+                                        <h4 class="text-pink">+10000 Degen Score</h4>
+                                        <p class="card-text">Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div style="display: flex; justify-content: center;">
+                                            <div class="parent">
+                                                <button class="button">Go to 
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <rect width="24" height="24" fill="url(#pattern0_145_720)"/>
+                                                        <defs>
+                                                        <pattern id="pattern0_145_720" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_145_720" transform="scale(0.02)"/>
+                                                        </pattern>
+                                                        <image id="image0_145_720" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADVklEQVR4nO2ZW4hNYRTH92BoBk2GiTSajpLJSMmQW+ZhyqgpHo6paR4wT1LCg9sDmnJ5wINCcikZDygJD5RQFClqJsolt0Ru4zZyv8xPX7PPtFrnts8+e5+90/7XeTn/71tr/fc53/r+Zx3LihAhQoT/BsAMoMnha76HeQcAcRU/lq+QPzjHYo+E7FVxbwKl+QbdloOQT0BVnvnWqZhPgJF5ibADDwQ6cxBzCShymWsh8Fc9mIl5ixAJaoDvIsE9oETwB5SYFS5yTAW+ihi/gHrPRIhE61WxuwQ3GHgoOCO6JofYMeCN2N8DLPJchJ2sH3BFJWsQ/CzVGG4BxQ7ilgP31UNq80WESDoW+CwSPgeGCX6nKmijg/NnzpTEMbdnLFcxy1Tiw4IbBNwW3G/z3U8TpwhoV7Gumhi+ixAFnFMFxAU/GfgpuLuyMYh1m1UM00DKCyJCFDEaeC+KeCt7PbBJFblD7V+i+C5gXEFFiGJaVDGnlcW4IThzN9TZXB3wQ3W4mYGISAA4ocT0tUygGvimbuhpwAfV+VqsoAGMAF6Jwj4CYwS/UgnVvm2NFRYAc+0nm8DFRPu07x7dXhM4ZIUNwEFV5HLBVQHdij9vzpEVNpBsUYxnGi/4ViXklBVWkMWiACeVmGYrrCDZomwQXAXwOl1jCBVIbVFqBb9ACb1QEF/lBkCjKvaO9E/AUcUvtcIGYCjQQTK2izVlwDPBfQnMnqQC0B84Q2r0WRR7bb26e66Z/VYYAOxTxXcoi/IYGCLW71Hr1waroLeo1aqop8YNA6vU+/vFnlLggeCMkZwUpIi4mnx0JyYftkW5rMQ0ir3T1d3TaX41BiGi1j6saScfQKVyvC+B4YLfqoRuKbSImLrgetJNGjNZFHP72y4gAfPpzi6UiDL7fnA8+chkUYAJam72SDYGv0QU21Zd4ni2GzqNRanMMCrd7ffg4YjbyUcmi5JmbjbPLyFtqhDzFajIMUZ7OotC77mTc7MXcm7mlYhmdRu/c2MtslkUkudm7V6KmOPl5COTRSH13KzJCxHVfkw+zGHGObqAUflOSeRPWM88kW1R9PA6E866TVQCXPdz8gFMsd2AU7S6SRJTf0bG/Zh82JNHp3+4NnidP0KECBGsQPAP0VYCE3AyK7wAAAAASUVORK5CYII="/>
+                                                        </defs>
+                                                        </svg>                                        
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
                         </div>
                     
                         <!-- Quest 4 -->
@@ -208,9 +277,31 @@
                             </div>
                             <button class="check " data-check-id="quest4">Check</button>
                         </div>
-                        <div id="quest4-details" class="quest-details">
-                            <div>+10000 Degen Score</div>
-                            <div>Analyze the extra points you earn based on the number of meme coins</div>
+                        <div id="quest4-details" class="" style="display: none;">
+                            <div class="notion">
+                                <div class="box">
+                                    <div class="card custom-card text-center">
+                                        <h2 class="card-title custom-title">Comment on Our Post with Hashtag: TOTHEMUN, MUNKI, MUN</h2>
+                                        <h4 class="text-pink">+10000 Degen Score</h4>
+                                        <p class="card-text">Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div style="display: flex; justify-content: center;">
+                                            <div class="parent">
+                                                <button class="button">Go to 
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <rect width="24" height="24" fill="url(#pattern0_145_720)"/>
+                                                        <defs>
+                                                        <pattern id="pattern0_145_720" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_145_720" transform="scale(0.02)"/>
+                                                        </pattern>
+                                                        <image id="image0_145_720" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADVklEQVR4nO2ZW4hNYRTH92BoBk2GiTSajpLJSMmQW+ZhyqgpHo6paR4wT1LCg9sDmnJ5wINCcikZDygJD5RQFClqJsolt0Ru4zZyv8xPX7PPtFrnts8+e5+90/7XeTn/71tr/fc53/r+Zx3LihAhQoT/BsAMoMnha76HeQcAcRU/lq+QPzjHYo+E7FVxbwKl+QbdloOQT0BVnvnWqZhPgJF5ibADDwQ6cxBzCShymWsh8Fc9mIl5ixAJaoDvIsE9oETwB5SYFS5yTAW+ihi/gHrPRIhE61WxuwQ3GHgoOCO6JofYMeCN2N8DLPJchJ2sH3BFJWsQ/CzVGG4BxQ7ilgP31UNq80WESDoW+CwSPgeGCX6nKmijg/NnzpTEMbdnLFcxy1Tiw4IbBNwW3G/z3U8TpwhoV7Gumhi+ixAFnFMFxAU/GfgpuLuyMYh1m1UM00DKCyJCFDEaeC+KeCt7PbBJFblD7V+i+C5gXEFFiGJaVDGnlcW4IThzN9TZXB3wQ3W4mYGISAA4ocT0tUygGvimbuhpwAfV+VqsoAGMAF6Jwj4CYwS/UgnVvm2NFRYAc+0nm8DFRPu07x7dXhM4ZIUNwEFV5HLBVQHdij9vzpEVNpBsUYxnGi/4ViXklBVWkMWiACeVmGYrrCDZomwQXAXwOl1jCBVIbVFqBb9ACb1QEF/lBkCjKvaO9E/AUcUvtcIGYCjQQTK2izVlwDPBfQnMnqQC0B84Q2r0WRR7bb26e66Z/VYYAOxTxXcoi/IYGCLW71Hr1waroLeo1aqop8YNA6vU+/vFnlLggeCMkZwUpIi4mnx0JyYftkW5rMQ0ir3T1d3TaX41BiGi1j6saScfQKVyvC+B4YLfqoRuKbSImLrgetJNGjNZFHP72y4gAfPpzi6UiDL7fnA8+chkUYAJam72SDYGv0QU21Zd4ni2GzqNRanMMCrd7ffg4YjbyUcmi5JmbjbPLyFtqhDzFajIMUZ7OotC77mTc7MXcm7mlYhmdRu/c2MtslkUkudm7V6KmOPl5COTRSH13KzJCxHVfkw+zGHGObqAUflOSeRPWM88kW1R9PA6E866TVQCXPdz8gFMsd2AU7S6SRJTf0bG/Zh82JNHp3+4NnidP0KECBGsQPAP0VYCE3AyK7wAAAAASUVORK5CYII="/>
+                                                        </defs>
+                                                        </svg>                                        
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
                         </div>
                     
                         <!-- Quest 5 -->
@@ -227,13 +318,35 @@
                             </div>
                             <button class="check" data-check-id="quest5">&#10003;</button>
                         </div>
-                        <div id="quest5-details" class="quest-details">
-                            <div>+10000 Degen Score</div>
-                            <div>Analyze the extra points you earn based on the number of meme coins</div>
+                        <div id="quest5-details" class="" style="display: none;">
+                            <div class="notion">
+                                <div class="box">
+                                    <div class="card custom-card text-center">
+                                        <h2 class="card-title custom-title">Comment on Our Post with Hashtag: TOTHEMUN, MUNKI, MUN</h2>
+                                        <h4 class="text-pink">+10000 Degen Score</h4>
+                                        <p class="card-text">Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div style="display: flex; justify-content: center;">
+                                            <div class="parent">
+                                                <button class="button">Go to 
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <rect width="24" height="24" fill="url(#pattern0_145_720)"/>
+                                                        <defs>
+                                                        <pattern id="pattern0_145_720" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_145_720" transform="scale(0.02)"/>
+                                                        </pattern>
+                                                        <image id="image0_145_720" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADVklEQVR4nO2ZW4hNYRTH92BoBk2GiTSajpLJSMmQW+ZhyqgpHo6paR4wT1LCg9sDmnJ5wINCcikZDygJD5RQFClqJsolt0Ru4zZyv8xPX7PPtFrnts8+e5+90/7XeTn/71tr/fc53/r+Zx3LihAhQoT/BsAMoMnha76HeQcAcRU/lq+QPzjHYo+E7FVxbwKl+QbdloOQT0BVnvnWqZhPgJF5ibADDwQ6cxBzCShymWsh8Fc9mIl5ixAJaoDvIsE9oETwB5SYFS5yTAW+ihi/gHrPRIhE61WxuwQ3GHgoOCO6JofYMeCN2N8DLPJchJ2sH3BFJWsQ/CzVGG4BxQ7ilgP31UNq80WESDoW+CwSPgeGCX6nKmijg/NnzpTEMbdnLFcxy1Tiw4IbBNwW3G/z3U8TpwhoV7Gumhi+ixAFnFMFxAU/GfgpuLuyMYh1m1UM00DKCyJCFDEaeC+KeCt7PbBJFblD7V+i+C5gXEFFiGJaVDGnlcW4IThzN9TZXB3wQ3W4mYGISAA4ocT0tUygGvimbuhpwAfV+VqsoAGMAF6Jwj4CYwS/UgnVvm2NFRYAc+0nm8DFRPu07x7dXhM4ZIUNwEFV5HLBVQHdij9vzpEVNpBsUYxnGi/4ViXklBVWkMWiACeVmGYrrCDZomwQXAXwOl1jCBVIbVFqBb9ACb1QEF/lBkCjKvaO9E/AUcUvtcIGYCjQQTK2izVlwDPBfQnMnqQC0B84Q2r0WRR7bb26e66Z/VYYAOxTxXcoi/IYGCLW71Hr1waroLeo1aqop8YNA6vU+/vFnlLggeCMkZwUpIi4mnx0JyYftkW5rMQ0ir3T1d3TaX41BiGi1j6saScfQKVyvC+B4YLfqoRuKbSImLrgetJNGjNZFHP72y4gAfPpzi6UiDL7fnA8+chkUYAJam72SDYGv0QU21Zd4ni2GzqNRanMMCrd7ffg4YjbyUcmi5JmbjbPLyFtqhDzFajIMUZ7OotC77mTc7MXcm7mlYhmdRu/c2MtslkUkudm7V6KmOPl5COTRSH13KzJCxHVfkw+zGHGObqAUflOSeRPWM88kW1R9PA6E866TVQCXPdz8gFMsd2AU7S6SRJTf0bG/Zh82JNHp3+4NnidP0KECBGsQPAP0VYCE3AyK7wAAAAASUVORK5CYII="/>
+                                                        </defs>
+                                                        </svg>                                        
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
                         </div>
                     </div>
                 </div>    
-                <div class="notion" style="margin-bottom: 30px;">
+                <!-- <div class="notion" style="margin-bottom: 30px;">
                     <div class="box">
                         <div class="card custom-card text-center">
                             <h2 class="card-title custom-title">Comment on Our Post with Hashtag: TOTHEMUN, MUNKI, MUN</h2>
@@ -256,34 +369,84 @@
                             </div>
                         </div>
                     </div>
-                </div>                           
+                </div>                            -->
                 <div class="mun__section-4">
-                    <div class="head">
-                        <div class="head__title head__title-1">Season</div>
-                        <div class="head__title head__title-2">Activity</div>
-                        <div class="head__title head__title-3">Date Of Completion</div>
-                        <div class="head__title head__title-4">Points Earned</div>
+                    <div class="head head__tablet__PC">
+                            <div class="head__title head__title-1">Season</div>
+                            <div class="head__title head__title-2">Activity</div>
+                            <div class="head__title head__title-3">Date Of Completion</div>
+                            <div class="head__title head__title-4">Points Earned</div>
+                    </div>
+                    <div class="head head__mobile">
+                        <div>
+                            <div class="head__title head__title-2">Activity</div>
+                            <div class="head__title head__title-1">Season</div>
+                        </div>
+                        <div>
+                            <div class="head__title head__title-4">Points Earned</div>
+                            <div class="head__title head__title-3">Date Of Completion</div>
+                        </div>
                     </div>
                     <div class="listItem">
-                        <div class="item">
+                        <div class="item item__mobile">
+                            <div class="">
+                                <div class="box box__title-2">Like Out Post</div>
+                                <div class="box box__title-1">The Ballhalla</div>
+                            </div>
+                            <div class="">
+                                <div class="box box__title-4">200.000</div>
+                                <div class="box box__title-3">Jan 04, 2024</div>
+                            </div>
+                        </div>
+                        <div class="item item__tablet__PC">
                             <div class="box box__title-1">The Ballhalla</div>
                             <div class="box box__title-2">Like Out Post</div>
                             <div class="box box__title-3">Jan 04, 2024</div>
                             <div class="box box__title-4">200.000</div>
                         </div>
-                        <div class="item">
+                        <div class="item item__mobile">
+                            <div class="">
+                                <div class="box box__title-2">Comment on Our Post</div>
+                                <div class="box box__title-1">The Ballhalla</div>
+                            </div>
+                            <div class="">
+                                <div class="box box__title-4">200.000</div>
+                                <div class="box box__title-3">Jan 04, 2024</div>
+                            </div>
+                        </div>
+                        <div class="item item__tablet__PC">
                             <div class="box box__title-1">The Ballhalla</div>
                             <div class="box box__title-2">Comment on Our Post</div>
                             <div class="box box__title-3">Jan 04, 2024</div>
                             <div class="box box__title-4">200.000</div>
                         </div>
-                        <div class="item">
+                        <div class="item item__mobile">
+                            <div class="">
+                                <div class="box box__title-2">Comment on Our Post with Hashtag: TOTHEMUN, MUNKI, MUN</div>
+                                <div class="box box__title-1">The Ballhalla</div>
+                            </div>
+                            <div class="">
+                                <div class="box box__title-4">200.000</div>
+                                <div class="box box__title-3">Jan 04, 2024</div>
+                            </div>
+                        </div>
+                        <div class="item item__tablet__PC">
                             <div class="box box__title-1">The Bancchanalia</div>
                             <div class="box box__title-2">Comment on Our Post with Hashtag: TOTHEMUN, MUNKI, MUN </div>
                             <div class="box box__title-3">May 29, 2024</div>
                             <div class="box box__title-4">10.000</div>
                         </div>
-                        <div class="item" style="border: 0;">
+                        <div class="item item__mobile" style="border: 0;">
+                            <div class="">
+                                <div class="box box__title-2">Comment on Our Post</div>
+                                <div class="box box__title-1">The Ballhalla</div>
+                            </div>
+                            <div class="">
+                                <div class="box box__title-4">200.000</div>
+                                <div class="box box__title-3">Jan 04, 2024</div>
+                            </div>
+                        </div>
+                        <div class="item item__tablet__PC" style="border: 0;">
                             <div class="box box__title-1">The Ballhalla</div>
                             <div class="box box__title-2">Comment on Our Post</div>
                             <div class="box box__title-3">Jan 04, 2024</div>
@@ -371,19 +534,7 @@
     <script src="./asset/js/layout.js"></script>
 
     <script>
-        const buttonSeeMore = document.querySelector(".mun__section-4 .button");
-        if(buttonSeeMore) {
-            const buttonNotion = document.querySelector(".notion");
-            buttonSeeMore.addEventListener('click', () => {
-                buttonNotion.classList.toggle('open');
-                buttonSeeMore.classList.toggle('open');
-                if (buttonNotion.style.display === "none" || buttonNotion.style.display === "") {
-                    buttonNotion.style.display = "block";
-                } else {
-                    buttonNotion.style.display = "none";
-                }
-            })
-        }
+        
 
         const buttonGoX = document.querySelector(".notion .parent") 
         if(buttonGoX)  {

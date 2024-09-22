@@ -34,6 +34,7 @@
             border-radius: @border-radius;
             color: @yellow-color;
             padding: 17px 15px;
+            justify-content: space-between;
             .referral-content {
                 margin-bottom: 4px;
                 display: flex;
@@ -96,6 +97,10 @@
             text-align: center;
             padding: 25px 25px 20px 25px;
             margin-bottom: 30px;
+        }
+
+        .score {
+            justify-content: space-between;
         }
 
         .score-title {
@@ -321,13 +326,16 @@
             }
             .box__title-4 {
                 width: 18%;
-                text-align: right;
+                text-align: center;
                 font-family: var(--font-second);
             }
             .box__title-2 {
                 font-family: var(--font-second);
                 text-align: center;
                 width: 32%;
+            }
+            .item__mobile {
+                display: none;
             }
         }
         .button {
@@ -351,6 +359,9 @@
                 border: 0;
             }
         }        
+        .head__mobile {
+            display: none;
+        }
     }
 }
 
@@ -395,7 +406,8 @@
     @highlight-color: #EE1B84;
     @text-color: #fff;
     @title-color: #FFEE64;
-    display: none;
+    // display: none;
+    margin-bottom: 30px;
     .box {
         width: 100%;
         padding-top: 32px;
