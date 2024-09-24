@@ -431,7 +431,7 @@ body {
     position: fixed;
     top: 50%;  /* Căn chỉnh theo chiều dọc (trung tâm màn hình) */
     left: 50%; /* Căn chỉnh theo chiều ngang (trung tâm màn hình) */
-    transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa */
+    transform: translate(-20%, -50%); /* Dịch chuyển để căn giữa */
 
     /* Khi hover vào ticket-card, phần nền sẽ bị mờ đi */
     &:hover .blur-background {
@@ -443,20 +443,12 @@ body {
         background-color: @background-color;
         border-radius: @border-radius;
         border: 1px solid #EE1B84;
-        padding: 93px 106px;
+        padding: 76px 64px;
         text-align: center;
         color: @highlight-color;
         box-shadow: 0px 3px 66.8px 0px #EE1B84;
         margin: 0 auto;
-        width: 843px;
-
-        /* Hover effect for the ticket */
-        &:hover {
-            transform: translate(-50%, -50%) scale(1.1); /* Phóng to thẻ */
-            box-shadow: 0px 0px 30px rgba(255, 0, 122, 0.8); /* Tăng độ nổi bật */
-            z-index: 1000; /* Đưa thẻ lên trên cùng */
-        }
-
+        width: auto;
         .ticket-image {
             margin-bottom: 37px;
             background-color: #000;
@@ -467,7 +459,7 @@ body {
         }
 
         .benefits-title {
-            font-size: 54px;
+            font-size: 36px;
             font-weight: 500;
             margin-bottom: 15px;
         }
@@ -477,9 +469,10 @@ body {
             padding: 0;
             li {
                 margin-bottom: 10px;
-                font-size: 36px;
+                font-size: 24px;
                 color: white;
                 display: flex;
+                align-items: center;
                 font-weight: 400;
                 align-items: flex-start;
                 justify-content: center;
@@ -487,7 +480,6 @@ body {
                 i {
                     margin-right: 10px;
                     color: @highlight-color;
-                    margin-top: 10px;
                 }
             }
         }
