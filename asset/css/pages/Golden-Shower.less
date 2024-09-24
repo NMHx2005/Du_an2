@@ -1,0 +1,693 @@
+body {
+    background-color: black;
+    font-family: 'GROBOLD', sans-serif;
+    background-image: url('../../images/golden-shower/background.png'); /* Thay thế bằng đường dẫn đến hình nền của bạn */
+    background-repeat: repeat; /* Hình ảnh sẽ lặp lại trên toàn bộ trang */
+    background-size: contain; /* Điều chỉnh kích thước hình nền */
+    background-position: center; /* Giữ hình nền ở giữa */
+    background-attachment: fixed; /* Giữ hình nền cố định khi cuộn trang */
+    background-color: #000000; /* Màu nền dự phòng nếu hình ảnh không tải được */
+    color: #FFF; /* Đảm bảo chữ hiển thị rõ ràng trên nền tối */
+}
+
+// Index
+.index__golden {
+    // overflow: hidden;
+    height: 810px;
+    width: 100%;
+    background-image: url("../../images/golden-shower/index.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    .title {
+        padding: 0;
+        margin: 0;
+        margin-top: 68px;
+        font-weight: 500;
+        font-size: 96px;
+        color: #FFEE64;
+        border: 0px solid #FFEE64;
+        // overflow: hidden; /* Để ẩn chữ khi nó đang rơi xuống */
+        text-align: center;
+        text-shadow: 0px 3.08333px 3.08333px rgba(0, 0, 0, 0.25), 0px 1.54167px 6.86042px #F1DD3D;
+    }
+    
+    /* Độ đậm giảm dần từ chữ đầu đến chữ cuối */
+    .title x {
+        transform: translateY(-100px); /* Vị trí ban đầu của chữ, nằm bên trên trang */
+        opacity: 0; /* Bắt đầu với chữ không hiển thị */
+        animation: dropDown 1s ease forwards; /* Hiệu ứng rơi xuống */
+    }
+    /* Hiệu ứng rơi xuống */
+    @keyframes dropDown {
+        to {
+            transform: translateY(0); /* Chữ rơi xuống vị trí gốc */
+            opacity: 1; /* Chữ xuất hiện khi rơi xuống */
+        }
+    }
+
+    /* Điều chỉnh thời gian cho từng chữ */
+    .title x:nth-child(1) {
+        filter: brightness(1.2);
+        animation-delay: 0.1s;
+    }
+
+    .title x:nth-child(2) {
+        filter: brightness(1.5);
+        animation-delay: 0.15s;
+    }
+
+    .title x:nth-child(3) {
+        filter: brightness(2);
+        animation-delay: 0.2s;
+    }
+
+    .title x:nth-child(4) {
+        filter: brightness(1.8);
+        animation-delay: 0.25s;
+    }
+
+    .title x:nth-child(5) {
+        filter: brightness(1.2);
+        animation-delay: 0.3s;
+    }
+
+    .title x:nth-child(6) {
+        filter: brightness(1);
+        animation-delay: 0.35s;
+    }
+
+    .title span:nth-child(7) {
+        filter: brightness(0.4); /* Chữ cuối cùng nhạt nhất */
+        animation-delay: 0.34s;
+    }
+    .title x:nth-child(8) {
+        filter: brightness(0.8);
+        animation-delay: 0.4s;
+    }
+    .title x:nth-child(9) {
+        filter: brightness(0.8);
+        animation-delay: 0.45s;
+    }
+    .title x:nth-child(10) {
+        filter: brightness(0.8);
+        animation-delay: 0.5s;
+    }
+    .title x:nth-child(11) {
+        filter: brightness(0.7);
+        animation-delay: 0.55s;
+    }
+    .title x:nth-child(12) {
+        background: linear-gradient(to right, #FFEE64 20%, #FFD700 20%); /* Gradient từ vàng nhạt đến vàng đậm */
+        -webkit-background-clip: text; /* Clip nền theo văn bản */
+        -webkit-text-fill-color: transparent; /* Chỉ hiển thị nền gradient, không màu văn bản */
+        filter: brightness(1.1);
+        animation-delay: 0.6s;
+    }
+
+
+    .title x:nth-child(13) {
+        background: linear-gradient(to right, #FFEE64 50%, #FFD700 50%); /* Gradient từ vàng nhạt đến vàng đậm */
+        -webkit-background-clip: text; /* Clip nền theo văn bản */
+        -webkit-text-fill-color: transparent; /* Chỉ hiển thị nền gradient, không màu văn bản */
+        // filter: brightness(1.2);
+        animation-delay: 0.65s;
+    }
+    .button__Go {
+        text-align: center;
+        margin-top: 350px;
+
+        button {
+            border: 0;
+            padding: 15px 55px;
+            background-color: #EE1B84;
+            font-size: 24px;
+            color: #FFEE64;
+            border-radius: 999px;
+            transition: background-color 2s ease, transform 1s ease; /* Thêm hiệu ứng chuyển màu và kích thước */
+        }
+        button:hover {
+            background-color: #FFEE64; /* Thay đổi màu nút khi hover */
+            transform: scale(1.1); /* Tăng kích thước nút khi hover */
+        }
+    }
+
+}
+
+
+// Content Golden
+.content__golden {
+    .title {
+        margin-bottom: 47px;
+        .index__golden {
+            background-image: none;
+            height: auto;
+            .title {
+                margin: 0;
+                box-shadow: 0px 1.54px 6.86px 0px #F1DD3D;
+
+                box-shadow: 0px 3.08px 3.08px 0px #00000040;
+
+            }
+            .ten {
+                display: flex;
+                align-items: center;
+                margin-top: 68px;
+                justify-content: center;
+                svg {
+                    // width: 45.48px;
+                    // height: 45.48px;
+                }
+            }
+        }
+    }
+    .section-1 {
+        margin-bottom: 93px;
+        display: flex;
+        .image__left {
+            margin-right: 37px;
+        }
+        .content__right {
+            @primary-color: #EE1B84; // Màu hồng
+            @secondary-color: #fff; // Màu trắng
+            @background-color: #000000; // Màu nền
+            @border-radius: 20px;
+            @input-bg: #EE1B8433;
+            max-height: 640px;
+            @button-bg: #EE1B84;
+            @button-text-color: #FFEE64;
+            @highlight-color: #77EF58; // Màu xanh lá cho chữ "Live"
+            flex: 1;
+            .card {
+                background-color: @background-color;
+                color: @secondary-color;
+                padding: 25px;
+                height: 100%;
+                border-radius: @border-radius;
+                border: 2px solid @primary-color;
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 25px;
+                    .status {
+                        color: @highlight-color;
+                        font-weight: bold;
+                        font-size: 20px;
+                        background: #240414!important;
+                        border-radius: 8px!important;
+                        padding: 20px 15px 20px 15px!important;
+                        i {
+                            margin-right: 10px;
+                            font-size: 20px;
+                        }
+                    }
+                    .timer {
+                        padding: 5px 10px;
+                        border-radius: 10px;
+                        font-weight: bold;
+                        font-size: 16px;
+                        .text {
+                            text-align: right;
+                            color: white;
+                            font-weight: 500;
+                            margin-bottom: 10px;
+                        }
+                        .time {
+                            text-align: center;
+                            color: #FFEE64;
+                            font-weight: 500;
+                            span {
+                                background: #240414!important;
+                                border-radius: 8px!important;
+                                padding: 8px 12px 8px 12px!important;
+                            }
+                        }
+                    }
+                }
+                .price {
+                    font-size: 54px;
+                    font-weight: 500;
+                    color: @primary-color;
+                    // margin-bottom: 25px;
+                    .title__price {
+                        font-family: 'Courier New', Courier, monospace;
+                        color: white;
+                        font-size: 26px;
+                        font-weight: 400;
+                        // margin-bottom: 3.41px;
+                    }
+
+                }
+                .info {
+                    font-weight: 500;
+                    .highlight {
+                        font-size: 24px;
+                        color: white;
+                    }
+                    .info__line {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        // margin-bottom: 10px;
+                        .title__info {
+                            font-weight: 400;
+                            font-size: 24px;
+                            font-family: 'Comic Neue', Courier;
+                            color: white;
+                            
+                        }
+                    }
+                    .em {
+                        font-weight: 700;
+                        font-size: 24px;
+                        color: white;
+                        font-family: 'Comic Neue', Courier;
+                        font-style: italic;
+                        letter-spacing: 3%;
+                        margin-bottom: 10px;
+                    }
+                    .last__line {
+                        font-size: 32px;
+                        font-weight: 500;
+                        color: white
+                    }
+                }
+                .input-group {
+                    margin-top: 10px;
+                    input {
+                        background-color: @input-bg;
+                        color: @secondary-color;
+                        border-radius: 12px;
+                        padding: 25px 0 25px 20px!important;
+                        border: none;
+                        padding: 10px;
+                        width: 100%;
+                        font-family: "Comic Neue", Courier;
+                        font-style: italic;
+                    }
+                }
+                .question {
+                    display: flex;
+                    align-items: center;
+                    background-color: transparent;
+                }
+                .question label  {
+                    font-family: 'Comic Neue', Courier, monospace;
+                    font-weight: 400;
+                    font-style: italic;
+                    margin-top: 12px;
+                    font-size: 20px;
+                    span {
+                        font-family: 'Comic Neue', Courier, monospace;
+                        font-weight: 400;
+                        font-style: italic;
+                        margin-top: 12px;
+                        font-size: 20px;
+                        color: #FFEE64;
+                    }
+                }
+                .question input {
+                    width: 28px;
+                    height: 28px;
+                    margin-top: 12px;
+                    border-radius: 12px;
+                    margin-right: 8px;
+                    background-color: #EE1B8433;
+                }
+                .btn-wallet-2 {
+                    margin-top: 20px;
+                    background-color: @button-bg;
+                    color: @button-text-color;
+                    padding: 14px;
+                    width: 100%;
+                    font-weight: 500;
+                    font-size: 16px;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    svg {
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                }
+                .btn-wallet-1 {
+                    margin-top: 20px;
+                    background-color: @button-bg;
+                    color: @button-text-color;
+                    padding: 14px;
+                    width: 100%;
+                    font-weight: 500;
+                    font-size: 16px;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    svg {
+                        margin-left: 5px;
+                        margin-right: 10px;
+                    }
+                }
+                .btn-wallet-4 {
+                    filter: brightness(0.4);
+                }
+            }
+        }
+    }
+    .section-2 {
+        @primary-color: #EE1B84; // Màu hồng
+        @background-color: #000; // Màu nền
+        @icon-color: #fff;
+        @youtube-bg: #000; // Nền video YouTube
+        @highlight-color: #ffd700; // Màu vàng
+        @border-radius: 10px;
+        @pagination-color: #ffd700;
+
+        background-color: transparent;
+        text-align: center;
+        color: @icon-color;
+
+        .title {
+            font-size: 3rem;
+            font-weight: 500;
+            color: @primary-color;
+            margin-bottom: 18px;
+            font-size: 78px;
+        }
+
+        .icons {
+            margin-bottom: 55px;
+            .icon {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 2rem;
+            color: @icon-color;
+            }
+        }
+
+        .youtube {
+            // display: inline-block;
+            background-color: transparent;
+            width: 100%;
+            border-radius: @border-radius;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 62px;
+            svg:first-child {
+                cursor: pointer;
+                margin-right: 15px;
+            }
+            svg:last-child {
+                margin-left: 15px;
+                cursor: pointer;
+            }
+            .counter {
+                color: #FFEE64;
+                font-weight: 500;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.plus {
+    position: relative;
+}
+.hover__benefit {
+    @primary-color: #ff007a;  // Màu hồng
+    @highlight-color: #FFEE64; // Màu vàng
+    @background-color: #000; // Nền đen
+    @border-radius: 36px;
+
+    position: fixed;
+    top: 50%;  /* Căn chỉnh theo chiều dọc (trung tâm màn hình) */
+    left: 50%; /* Căn chỉnh theo chiều ngang (trung tâm màn hình) */
+    transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa */
+
+    /* Khi hover vào ticket-card, phần nền sẽ bị mờ đi */
+    &:hover .blur-background {
+        filter: blur(5px); /* Làm mờ nền khi hover */
+    }
+    z-index: 999;
+
+    .ticket-card {
+        background-color: @background-color;
+        border-radius: @border-radius;
+        border: 1px solid #EE1B84;
+        padding: 93px 106px;
+        text-align: center;
+        color: @highlight-color;
+        box-shadow: 0px 3px 66.8px 0px #EE1B84;
+        margin: 0 auto;
+        width: 843px;
+
+        /* Hover effect for the ticket */
+        &:hover {
+            transform: translate(-50%, -50%) scale(1.1); /* Phóng to thẻ */
+            box-shadow: 0px 0px 30px rgba(255, 0, 122, 0.8); /* Tăng độ nổi bật */
+            z-index: 1000; /* Đưa thẻ lên trên cùng */
+        }
+
+        .ticket-image {
+            margin-bottom: 37px;
+            background-color: #000;
+            img {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+
+        .benefits-title {
+            font-size: 54px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            li {
+                margin-bottom: 10px;
+                font-size: 36px;
+                color: white;
+                display: flex;
+                font-weight: 400;
+                align-items: flex-start;
+                justify-content: center;
+                font-family: 'Comic Neue', Courier, monospace;
+                i {
+                    margin-right: 10px;
+                    color: @highlight-color;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+// Footer
+footer {
+    // position: fixed;
+    bottom: 0;
+    width: 100%;
+    #token-line.social-line {
+        background-color: #EE1B84;
+    }
+    #token-line .token-marquee .token-item {
+        padding: 0px 18px;
+    }
+    #token-line {
+        margin-bottom: 0;
+    }
+}
+
+
+
+// Checking 
+.checking {
+    @primary-color: #EE1B84; // Màu hồng
+    @background-color: #030303; // Màu nền đen
+    @border-color: #EE1B84; // Màu viền hồng
+    @highlight-color: #ffd700; // Màu vàng cho đồng hồ đếm ngược
+
+    position: fixed;
+    top: 50%;  /* Căn chỉnh theo chiều dọc (trung tâm màn hình) */
+    left: 50%; /* Căn chỉnh theo chiều ngang (trung tâm màn hình) */
+    transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa */
+
+    /* Khi hover vào ticket-card, phần nền sẽ bị mờ đi */
+    &:hover .blur-background {
+        filter: blur(5px); /* Làm mờ nền khi hover */
+    }
+
+    .wrapper {
+        width: 630px;
+        background-color: @background-color;
+        border-radius: 20px;
+        border: 2px solid @border-color;
+        padding: 20px;
+        // width: 400px;
+        // height: 220px;
+        text-align: center;
+        position: relative;
+        color: @primary-color;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            .status {
+                color: @highlight-color;
+                font-weight: bold;
+                font-size: 20px;
+                background: #240414!important;
+                border-radius: 8px!important;
+                padding: 20px 15px 20px 15px!important;
+                i {
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
+            }
+            .timer {
+                padding: 5px 10px;
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 16px;
+                .text {
+                    text-align: right;
+                    color: white;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+                .time {
+                    text-align: center;
+                    color: #FFEE64;
+                    font-weight: 500;
+                    span {
+                        background: #240414!important;
+                        border-radius: 8px!important;
+                        padding: 8px 12px 8px 12px!important;
+                    }
+                }
+            }
+        }
+
+        .loading-text {
+            font-size: 64px;
+            font-weight: 500;
+            margin-bottom: 13px;
+        }
+
+        /* HTML: <div class="loader"></div> */
+        .loader {
+            width: 92px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: #CB1770;
+            -webkit-mask: radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
+            transform-origin: 50% 40%;
+            animation: l25 1s infinite linear;
+        }
+        @keyframes l25 {
+            100% {transform: rotate(1turn)}
+        }
+
+        .wait-text {
+            margin-top: 25px;
+            font-size: 24px;
+            font-weight: 700;
+            font-style: italic;
+            color: white;
+            font-family: 'Comic Neue', Courier, monospace;
+        }
+
+        @keyframes spin {
+            0% {
+            transform: rotate(0deg);
+            }
+            100% {
+            transform: rotate(360deg);
+            }
+        }
+        .ineligible-text {
+            color: #EE1B84;
+            font-size: 64px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            margin-top: 15px;
+        }
+        .eligible-text {
+            font-size: 64px;
+            font-weight: 500;
+            color: #FFBF11;
+            margin-bottom: 12px;
+            text-shadow: 0px 1px 4px 0px #FFBF11;
+            /* Điều chỉnh thời gian cho từng chữ */
+            x:nth-child(1) {
+                filter: brightness(2);
+            }
+
+             x:nth-child(2) {
+                filter: brightness(1.8);
+            }
+
+             x:nth-child(3) {
+                filter: brightness(1.6);
+            }
+
+             x:nth-child(4) {
+                filter: brightness(1.4);
+            }
+
+             x:nth-child(5) {
+                filter: brightness(1.2);
+            }
+
+             x:nth-child(6) {
+                filter: brightness(1);
+            }
+
+             span:nth-child(7) {
+                filter: brightness(0.9);
+            }
+             x:nth-child(8) {
+                filter: brightness(0.8);
+            }
+
+          }
+        
+          .check-icon {
+            margin-bottom: 15px;
+          }
+        
+          .info-text {
+            margin-top: 15px;
+            font-size: 24px;
+            color: white;
+            font-style: italic;
+            font-family: 'Comic Neue', Courier, monospace;
+            margin-bottom: 25px;
+          }
+        .advance-button {
+            background-color: #EE1B84;
+            color: #FFEE64;
+            width: 100%;
+            z-index: 1000;
+            border-radius: 8px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        
+    }
+
+}
