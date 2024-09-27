@@ -114,6 +114,37 @@
                         </div>
                         <button class="btn btn-referral">Copy Referral Link</button>
                     </div>
+                    <div class="item__section-1">
+                        <div class="continue__box">
+                            <div class="detail__info">
+                                You are not eligible for the Bacchanalia yet
+                            </div>
+                            <svg width="42" height="41" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_396_7386)">
+                                <circle cx="20.9998" cy="20" r="10.5655" stroke="#FFEE64" stroke-width="2.86908"/>
+                                <path d="M19.4652 17.3051L22.6095 17.0513L22.4544 25.187L19.4652 25.4408V17.3051ZM19.4511 13.7378L22.68 13.5968L22.5108 16.0784L19.437 16.304L19.4511 13.7378Z" fill="#FFEE64"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_d_396_7386" x="0.557297" y="0.0851946" width="40.8852" height="40.8849" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dy="0.527654"/>
+                                <feGaussianBlur stdDeviation="4.22123"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.933333 0 0 0 0 0.392157 0 0 0 1 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_396_7386"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_396_7386" result="shape"/>
+                                </filter>
+                                </defs>
+                            </svg> 
+                        </div>
+                        <div class="section-1__button">
+                            <button class="check">Check</button>
+                        </div>
+                    </div>
+                    <div class="item2__section-1" style="display: none;">
+                        You have to share your Degen Report on X + Connect your wallet to be eligible for "The Bachannalia"
+                    </div>
                 </div>
                 <div class="mun__section-2">
                     <div class="score-section">
@@ -309,12 +340,12 @@
                             <div class="quest-item" data-target="#quest5-details">
                                 <div class="quest-content">
                                     <img src="asset/images/TwitterX.png" alt="Twitter Icon" />
-                                    <div>
+                                    <div class="text-content">
                                         <div class="quest-content-1">Comment on Our Post with Hashtag: TOTHEMUN, MUNKI, MUN</div>
                                         <div class="quest-content-2">+0.000 Degen Score</div>
                                     </div>
                                 </div>
-                                <span class="toggle-icon">&#9662;</span>
+                                <span class="toggle-icon arrow">&#9662;</span>
                             </div>
                             <button class="check" data-check-id="quest5">&#10003;</button>
                         </div>
@@ -344,6 +375,9 @@
                                 </div>
                             </div>  
                         </div>
+                    </div>
+                    <div class="moreQuest">
+                        <button>More Quest</button>
                     </div>
                 </div>    
                 <!-- <div class="notion" style="margin-bottom: 30px;">
@@ -580,6 +614,31 @@
         });
 
 
+
+        const buttonDetaill = document.querySelector(".content-mission .mun__section-1 .item__section-1 .continue__box svg");
+        if(buttonDetaill)  {
+            const detail = document.querySelector(".content-mission .mun__section-1 .item2__section-1");
+            buttonDetaill.addEventListener('click', () => {
+                detail.classList.toggle('open');
+                if (detail.style.display === "none" || detail.style.display === "") {
+                    detail.style.display = "block";
+                } else {
+                    detail.style.display = "none";
+                }
+            });
+        }
+        const colorText = document.querySelector(".content-mission .mun__section-1 .item__section-1 .continue__box .detail__info");
+        const buttonCheckk = document.querySelector(".content-mission .mun__section-1 .item__section-1 .section-1__button button");
+        if (buttonCheckk) {
+            buttonCheckk.addEventListener('click', () => {
+                // colorText.style.color = '#FFEE64'; // Thay đ��i màu chữ
+                if(buttonCheckk.innerHTML !== "✓") {
+                    colorText.style.color = '#FFEE64'; // Thay đ�i màu chữ khi nút "Check" đã được click
+                } else {
+                    colorText.style.color = '#9F9F9F'; // Trở lại màu chữ khi nút "Check" đã được click
+                }
+            });
+        }
     </script>
 </body>
 </html>

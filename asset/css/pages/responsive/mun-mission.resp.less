@@ -5,6 +5,19 @@
 
 // Tablet
 @media(max-width: 1024px) {
+    .content-mission .mun__section-1 .item__section-1 .continue__box .detail__info {
+        font-size: 14px;
+    }
+    .content-mission .mun__section-1 .item__section-1 .section-1__button button {
+        font-size: 14px;
+    }
+    .content-mission .mun__section-1 .item__section-1 .section-1__button {
+        padding: 22px 11px 22px 11px;
+    }
+    .content-mission .mun__section-1 .item2__section-1 {
+        font-size: 14px;
+        padding: 32px 50px;
+    }
     .content-mission {
         .header {
             font-size: 48px;
@@ -237,6 +250,14 @@
             }
             .quest-item  {
                 width: 80%;
+                // white-space: nowrap;        /* Đảm bảo văn bản chỉ nằm trên 1 dòng */
+                // overflow: hidden;           /* Ẩn phần văn bản vượt quá chiều rộng */
+                // text-overflow: ellipsis;    /* Thêm dấu '...' nếu văn bản quá dài */
+            }
+            .content-mission .mun__section-3 .quest-content-1 {
+                white-space: nowrap;        /* Đảm bảo văn bản chỉ nằm trên 1 dòng */
+                overflow: hidden;           /* Ẩn phần văn bản vượt quá chiều rộng */
+                text-overflow: ellipsis;    /* Thêm dấu '...' nếu văn bản quá dài */
             }
         }
         .mun__section-4 {
@@ -325,5 +346,11 @@
 
 // Mobile
 @media (max-width: 575.98px) {
+    .content-mission .mun__section-4 .button button {
+        font-size: 12px;
 
+    }
+    .content-mission .mun__section-3 .moreQuest button {
+        font-size: 12px;
+    }
 }
