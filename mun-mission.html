@@ -629,16 +629,19 @@
         }
         const colorText = document.querySelector(".content-mission .mun__section-1 .item__section-1 .continue__box .detail__info");
         const buttonCheckk = document.querySelector(".content-mission .mun__section-1 .item__section-1 .section-1__button button");
+
         if (buttonCheckk) {
             buttonCheckk.addEventListener('click', () => {
-                // colorText.style.color = '#FFEE64'; // Thay đ��i màu chữ
                 if(buttonCheckk.innerHTML !== "✓") {
-                    colorText.style.color = '#FFEE64'; // Thay đ�i màu chữ khi nút "Check" đã được click
+                    colorText.innerHTML = "You are eligible for the Bacchanalia"; // Đổi chữ khi nút chưa là dấu "✓"
+                    colorText.style.color = '#FFEE64'; // Thay đổi màu chữ khi nút "Check" đã được click
                 } else {
-                    colorText.style.color = '#9F9F9F'; // Trở lại màu chữ khi nút "Check" đã được click
+                    colorText.innerHTML = "You are not eligible for the Bacchanalia"; // Đổi lại chữ khi nút là dấu "✓"
+                    colorText.style.color = '#9F9F9F'; // Thay đổi màu chữ khi nút đã được click
                 }
             });
         }
+
     </script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 .airdrop__content {
     margin-top: 67px;
     margin-bottom: 111px;
-    height: 550px;  
+    height: auto;  
     .container {
         display: flex;
         padding-left: 40px;
@@ -22,7 +22,7 @@
         background-size: cover;            /* Đảm bảo hình ảnh phủ toàn bộ phần tử */
         background-position: center;       /* Căn giữa hình ảnh */
         background-repeat: no-repeat;      /* Không lặp lại hình ảnh */
-        height: 550px;                      /* Đảm bảo phần tử có chiều cao phù hợp */
+        height: auto;                      /* Đảm bảo phần tử có chiều cao phù hợp */
         position: relative;                 /* Tạo vị trí tương đối cho phần tử chứa button */
         border: 2px solid #EE1B84;
         border-radius: 20px;
@@ -44,7 +44,7 @@
         flex: 1;
         // width: 640px;
         .content__top {
-            margin-bottom: 20pxp;
+            margin-bottom: 20px;
             background-image: url("../../images/airdrop/Fuxk_Bitch_Get_Money.png");
             height: 445px;
             border: 2px solid #EE1B84;
@@ -77,8 +77,54 @@
             padding: 14px 25px;
             border: 2px solid #EE1B84;
             border-radius: 20px;
-            
-            
+            .middle__top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .reward-box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h2 {
+                    color: #FFFFFF;
+                    font-weight: 700;
+                    font-size: 16px;
+                    margin-bottom: 0;
+                    font-family: 'Comic Neue', Courier, monospace;
+                }
+                p {
+                    font-family: 'Comic Neue', Courier, monospace;
+                    font-weight: 400;
+                    margin-bottom: 6px;
+                    font-size: 12px;
+                    color: white;
+                }
+            }
+            .middle__top {
+                width: 420px;
+            }
+            .progress-container {
+                border: 0.84px solid #EE1B84;
+                height: 12px;
+                border-radius: 8.4px;
+            }
+            .info__right {
+                text-align: right;
+            }
+            .claim-button {
+                background-color: #EE1B84;
+                padding: 12px 20px 12px 20px;
+                border-radius: 8px;
+                color: #FFEE64;
+
+            }
+            .reward-right {
+                p {
+                    margin: 0;
+                    font-size: 9px;
+                }
+            }
         }
 
 
