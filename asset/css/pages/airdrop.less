@@ -39,6 +39,148 @@
             left: 50%;                      /* Căn chỉnh theo trục ngang */
             transform: translate(-50%, -50%); /* Dịch chuyển nút để nằm chính giữa */
         }
+        /* General card styling */
+        .allocation-card {
+            position: relative;
+            padding-top: 40px;
+            padding-left: 25px;
+            padding-right: 25px;
+            text-align: center;
+        }
+        .progress-container {
+            margin-bottom: 20px;
+        }
+        // /* Container for the progress ring */
+        // .progress-container {
+        //     position: relative;
+        //     width: 150px;
+        //     margin-bottom: 20px;
+        //     height: 150px;
+        //     margin: 0 auto;
+        // }
+        
+        // /* Progress ring SVG */
+        // .progress-ring__circle {
+        //     stroke-dasharray: 377; /* Chu vi của vòng tròn, tính bằng 2πr (2 * 3.14 * 60) */
+        //     stroke-dashoffset: 0; /* Bắt đầu từ chu vi tròn đầy */
+        //     transition: stroke-dashoffset 0.35s; /* Hiệu ứng khi thay đổi */
+        //     transform: rotate(-90deg);
+        //     transform-origin: 50% 50%; /* Quay vòng tròn từ vị trí giữa */
+        // }
+        
+        // /* Number in the center */
+        // .progress-number {
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     text-align: center;
+        // }
+        
+        // .percentage {
+        //     font-size: 32px;
+        //     color: #ff4081;
+        //     font-weight: bold;
+        // }
+        
+        // .progress-number small {
+        //     display: block;
+        //     color: #ff4081;
+        //     font-size: 14px;
+        // }
+        
+        // /* Progress details */
+        // .progress-details {
+        //     text-align: center;
+        //     font-size: 12px;
+        //     color: white;
+        //     margin-top: 10px;
+        // }
+        
+  
+
+        /* Allocation info */
+        .allocation-info {
+            margin-bottom: 20px;
+        }
+        .allocation-info h3 {
+            color: #EE1B84; /* Pink title */
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            text-align: left;
+
+        }
+
+        .claim-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: white;
+            .span-1 {
+                font-weight: 700;
+                font-family: 'Comic Neue', Courier, monospace;
+            }
+            .span-2 {
+                font-weight: 500;
+            }
+        }
+
+        .claim-row-1 {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 6px;
+            .span-1 {
+                font-family: 'Comic Neue', Courier, monospace;
+                font-size: 20px;
+                font-weight: 700;
+                color: #FFFFFF;
+            }
+            .span-2 {
+                font-size: 20px;
+                font-weight: 500;
+                color: #FFFFFF;
+            }
+        }
+        .claim-row-2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .span-1 {
+                font-family: 'Comic Neue', Courier, monospace;
+                font-size: 14px;
+                font-weight: 400;
+                color: #FFFFFF;
+            }
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ff4081; /* Pink horizontal line */
+            margin: 20px 0;
+        }
+
+        /* Claim button */
+        .claim-btn {
+            background-color: #ff4081; /* Pink background */
+            color: #FFEE64; /* Yellowish text color */
+            padding: 12px 20px;
+            border: none;
+            display: inline;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .claim-btn:hover {
+            background-color: #e5397a; /* Slightly darker on hover */
+        }
+
+
     }
     .content__right {
         flex: 1;
@@ -104,11 +246,42 @@
             .middle__top {
                 width: 420px;
             }
-            .progress-container {
-                border: 0.84px solid #EE1B84;
-                height: 12px;
-                border-radius: 8.4px;
+            /* Container for the progress bar */
+            .progress-bar-container {
+                position: relative;
+                width: 100%;
+                max-width: 500px;
+                height: 20px;
+                background-color: black;
+                border-radius: 10px;
+                border: 2px solid #ff4081; /* Pink border */
+                display: flex;
+                align-items: center;
             }
+            
+            /* Progress bar fill (the yellow part) */
+            .progress-fill {
+                background-color: #FFEE64; /* Yellow fill */
+                height: 100%;
+                width: 50%; /* Adjust width dynamically via JS */
+                border-radius: 10px 0 0 10px; /* Rounded left side */
+            }
+            
+            /* Handle (the white circle) */
+            .progress-handle {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 50%; /* Adjust position via JS */
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                border: 2px solid #ff4081; /* Pink border around the handle */
+            }
+  
             .info__right {
                 text-align: right;
             }
@@ -136,3 +309,387 @@
 
 
 
+.connect {
+    /* Main modal container */
+    .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    }
+    
+    /* Modal content box */
+    .modal-content {
+        background-color: black;
+        border: 2px solid #ff4081; /* Border màu hồng */
+        border-radius: 15px; /* Bo tròn các góc */
+        width: 530px;
+        padding: 40px 40px 40px 25px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Căn giữa theo cả chiều ngang và dọc */
+        text-align: center;
+        color: white;
+        box-shadow: 0 0 15px rgba(255, 64, 129, 0.5); /* Bóng đổ */
+        font-family: Arial, sans-serif;
+    }
+    
+    
+    /* Close button (X) */
+    .close-button {
+        position: absolute;
+        top: 0px;
+        width: 55px;
+        height: 55px;
+        right: 5px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 55px;
+        cursor: pointer;
+    }
+    
+    /* Header style */
+    .modal-content h2 {
+        color: #EE1B84; /* Màu chữ tiêu đề hồng */
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+    
+    /* Paragraph styling */
+    .modal-content p {
+        font-size: 20px;
+        font-style: italic;
+        margin-bottom: 25px;
+        font-weight: 700;
+        font-family: 'Comic Neue', Courier, monospace;
+    }
+    
+    /* Sign message button */
+    .signn-message-btn {
+        background-color: #EE1B84; /* Màu nền hồng */
+        color: #FFEE64; /* Màu chữ vàng nhạt */
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        font-family: 'GROBOLD', sans-serif;
+        font-size: 16px;
+        display: inline;
+        // width: 40%;
+        font-weight: 500;
+        cursor: pointer;
+        margin-bottom: 8px;
+    }
+    
+    /* Cancel link styling */
+    .cancel {
+        display: block;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 20px;
+        cursor: pointer;
+        font-family: 'Comic Neue', Courier, monospace;
+    }
+    
+}
+
+
+
+.Amazing {
+    /* Modal container */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+  }
+  
+  /* Modal content box */
+  .modal-content {
+    background-color: black;
+    border: 2px solid #ff4081; /* Pink border */
+    border-radius: 15px;
+    padding: 109px 32px 80px 32px;
+    width: 666px;
+
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 55px;
+    cursor: pointer;
+  }
+  
+  /* Title styling */
+  .modal-title {
+    font-size: 64px;
+    font-weight: 500;
+    color: #EE1B84; /* Pink title */
+    margin-bottom: 20px;
+  }
+  
+  /* Message styling */
+  .modal-message {
+    font-size: 24px;
+    margin-bottom: 54px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Comic Neue', Courier, monospace;
+  }
+  
+  /* Tweet button */
+  .tweet-btn {
+    background-color: #EE1B84; /* Pink background */
+    color: #FFEE64; /* Yellow text */
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tweet-btn:hover {
+    background-color: #e5397a; /* Darker pink on hover */
+  }
+  
+}
+
+
+.detailDegent {
+    /* Modal Container (centered in the screen) */
+    .degen-modal {
+        background-color: #000; /* Background black */
+        border: 2px solid #ff4081; /* Pink border */
+        border-radius: 15px;
+        padding: 30px 25px;
+        max-width: 1010px;
+        color: white;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Căn chỉnh chính giữa */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        z-index: 1000; /* Đảm bảo modal nằm trên các phần tử khác */
+        text-align: center;
+    }
+    .title__detail {
+        text-align: left;
+        font-family: 'Comic Neue', Courier, monospace;
+        font-weight: 400;
+        font-size: 24px;
+        color: white;
+        margin-bottom: 17px;
+    }
+    /* Close button */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 54px;
+        cursor: pointer;
+    }
+
+    
+    /* Title styling */
+    .degen-title {
+        font-size: 36px;
+        color: #EE1B84; /* Pink title */
+        margin-bottom: 30px;
+        font-weight: 500;
+        
+    }
+    
+    /* Levels Grid */
+    .degen-levels {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    
+    /* Individual Level Box */
+    .degen-level {
+        border: 2px solid #EE1B84;
+        border-radius: 10px;
+        padding: 10px;
+        width: 169px;
+        margin-right: 32px;
+        padding-top: 34px;
+        padding-bottom: 34px;
+        font-family: 'Comic Neue', Courier, monospace;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        .active1  {
+            color: #FFEE64;
+        }
+    }
+    .degen-level:last-child {
+        margin-right: 0;
+    }
+    .degen-level img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    
+    .degen-level p {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 10px;
+        font-family: 'Comic Neue', Courier, monospace;
+        color: white;
+    }
+    
+    .degen-level.active {
+        background-color: rgba(255, 64, 129, 0.1); /* Highlight active level */
+    }
+    
+    /* Description Section */
+    .degen-description {
+        border-radius: 10px;
+        padding: 25px 62px;
+        border: 2px solid #EE1B84;
+    }
+    
+    .degen-description h3 {
+        font-size: 24px;
+        font-weight: 500;
+        color: #FFEE64; /* Yellow title */
+        margin-bottom: 20px;
+    }
+    
+    .degen-description p {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Comic Neue', Courier, monospace;
+        color: white;
+    }
+  
+}
+
+.airdrop__content .content__right .content__bottom .progress-bar-container {
+    background-color: #FFEE64;
+}
+
+
+.supper {
+    /* Modal Container */
+    .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        z-index: 1000;
+    }
+  
+    /* Modal Content */
+    .modal-content {
+        background-color: black;
+        border: 2px solid #ff4081; /* Pink border */
+        border-radius: 15px;
+        padding: 32px 78px;
+        width: 666px;
+        text-align: center;
+        color: white;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Close Button */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    /* Title */
+    .modal-title {
+        font-size: 48px;
+        font-weight: 500;
+        color: #EE1B84; /* Pink title */
+        margin-bottom: 8px;
+    }
+    
+    /* Sub Title */
+    .sub-title {
+        font-size: 32px;
+        font-weight: 500;
+        color: #FFEE64; /* Yellow color */
+        margin-bottom: 20px;
+    }
+    
+    /* Message Text */
+    .modal-message {
+        font-size: 24px;
+        margin-bottom: 54px;
+    }
+    
+    .modal-message strong {
+        font-size: 24px;
+        color: #FFEE64; /* Yellow color for bonus points */
+    }
+    
+    /* Tweet Button */
+    .tweet-btn {
+        color: #FFEE64; /* Yellow text */
+        border: none;
+        background-color: #EE1B84;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .tweet-btn:hover {
+        background-color: #e5397a; /* Slightly darker pink on hover */
+    }
+    
+}
