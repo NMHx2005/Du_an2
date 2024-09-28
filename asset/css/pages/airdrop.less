@@ -176,10 +176,16 @@
             font-size: 16px;
             cursor: pointer;
             font-weight: 500;
-        }
+        } 
 
         .claim-btn:hover {
             background-color: #e5397a; /* Slightly darker on hover */
+        }
+        .claim-btn.disabled {
+            background-color: #ff007f; /* Giữ nguyên màu nền */
+            opacity: 0.5; /* Mờ đi khi bị disable */
+            cursor: not-allowed;
+            pointer-events: none; /* Vô hiệu hóa sự kiện click */
         }
 
 
