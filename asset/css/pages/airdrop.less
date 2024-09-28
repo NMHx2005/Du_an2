@@ -1,8 +1,10 @@
-#header .inner .connects a.connect__wallet {
-    padding: 14px 80px 10px 80px;
-}
-#header .inner .connects a.x.connected {
-    padding: 12px 60px;
+@media(min-width: 1400px) {
+    #header .inner .connects a.connect__wallet {
+        padding: 14px 80px 10px 80px;
+    }
+    #header .inner .connects a.x.connected {
+        padding: 12px 60px;
+    }
 }
 
 // airdrop__content
@@ -224,6 +226,11 @@
                 justify-content: space-between;
                 align-items: center;
             }
+            .reward-middle {
+                flex: 1;
+                margin-right: 15px;
+                margin-left: 15px;
+            }
             .reward-box {
                 display: flex;
                 justify-content: space-between;
@@ -244,43 +251,55 @@
                 }
             }
             .middle__top {
-                width: 420px;
+                // width: 420px;
             }
-            /* Container for the progress bar */
+            
+            .progress-slider {
+                border: 0.84px solid #EE1B84;
+                border-radius: 8px;
+                width: 100%;
+            }
+            // .progress-bar-container {
+            //     position: relative;
+            // }
+            // .progress-bar {
+            //     position: absolute;
+            //     // width: auto;
+            //     height: 12px;
+            //     border: 0.84px solid #EE1B84;
+            //     border-radius: 8px;
+            //     margin-top: 2px;
+            //     top: 0;
+            //     background-color: #FFEE64;
+            //     .progress-fill {
+            //         background-color: #FFEE64;
+            //         position: absolute;
+            //         top: 0;
+            //         // z-index: 999;
+            //     }
+            // }
             .progress-bar-container {
                 position: relative;
-                width: 100%;
-                max-width: 500px;
-                height: 20px;
-                background-color: black;
-                border-radius: 10px;
-                border: 2px solid #ff4081; /* Pink border */
-                display: flex;
-                align-items: center;
             }
             
-            /* Progress bar fill (the yellow part) */
-            .progress-fill {
-                background-color: #FFEE64; /* Yellow fill */
-                height: 100%;
-                width: 50%; /* Adjust width dynamically via JS */
-                border-radius: 10px 0 0 10px; /* Rounded left side */
-            }
-            
-            /* Handle (the white circle) */
-            .progress-handle {
+            .progress-bar {
                 position: absolute;
-                width: 20px;
-                height: 20px;
-                background-color: white;
-                border-radius: 50%;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 50%; /* Adjust position via JS */
-                cursor: pointer;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-                border: 2px solid #ff4081; /* Pink border around the handle */
+                height: 12px;
+                border: 0.84px solid #EE1B84;
+                border-radius: 8px;
+                margin-top: 2px;
+                top: 0;
+                width: 19%;
+                background-color: #FFEE64;
             }
+            
+            .progress-fill {
+                background-color: #FFEE64;
+                position: absolute;
+                top: 0;
+            }
+            
+            
   
             .info__right {
                 text-align: right;
@@ -307,7 +326,11 @@
 }
 // Hết airdrop__content
 
-
+@media(min-width: 1400px) {
+    #header .inner .connects a.wl {
+        padding: 12px 97px 8px 97px;
+    }
+}
 
 .connect {
     /* Main modal container */
@@ -600,9 +623,6 @@
   
 }
 
-.airdrop__content .content__right .content__bottom .progress-bar-container {
-    background-color: #FFEE64;
-}
 
 
 .supper {
@@ -692,4 +712,9 @@
         background-color: #e5397a; /* Slightly darker pink on hover */
     }
     
+}
+
+
+.title__mobile, .reward__mobile {
+    display: none;
 }
