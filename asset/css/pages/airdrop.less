@@ -209,11 +209,12 @@
             .top__bottom {
                 
                 button {
-                    background: linear-gradient(0deg, #EE1B84, #EE1B84), linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+                    // background: linear-gradient(0deg, #EE1B84, #EE1B84), linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+                    background-color: #480828;
                     border: 0;
                     padding: 12px 20px 12px 20px;
                     border-radius: 8px;
-
+                    color: #FFEE64;
                 }
             }
         }
@@ -253,63 +254,70 @@
             .middle__top {
                 // width: 420px;
             }
-            
-            .progress-slider {
-                border: 0.84px solid #EE1B84;
-                border-radius: 8px;
-                width: 100%;
-            }
-            // .progress-bar-container {
-            //     position: relative;
-            // }
-            // .progress-bar {
-            //     position: absolute;
-            //     // width: auto;
-            //     height: 12px;
-            //     border: 0.84px solid #EE1B84;
-            //     border-radius: 8px;
-            //     margin-top: 2px;
-            //     top: 0;
-            //     background-color: #FFEE64;
-            //     .progress-fill {
-            //         background-color: #FFEE64;
-            //         position: absolute;
-            //         top: 0;
-            //         // z-index: 999;
-            //     }
-            // }
             .progress-bar-container {
-                position: relative;
+                .level-container {
+                    width: 100%;
+                    border: 0.84px solid #EE1B84;
+                    background-color: transparent;
+                    border-radius: 8px;
+                }
+                /* Tổng thể của input range */
+                input[type="range"] {
+                    -webkit-appearance: none;
+                    width: 100%;
+                    height: 8px;
+                    background: transparent;
+                    border-radius: 5px;
+                    outline: none;
+                }
+
+                /* Thanh trượt trước khi có màu, từ transparent */
+                input[type="range"]::-webkit-slider-runnable-track {
+                    width: 100%;
+                    height: 8px;
+                    /* background: linear-gradient(to right, lightgreen 0%, transparent 100%); */
+                    border-radius: 5px;
+                }
+
+                /* Đầu của thanh trượt (thumb) */
+                input[type="range"]::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 8px;
+                    height: 8px;
+                    background: transparent;
+                    cursor: pointer;
+                    border-radius: 50%;
+                }
+
+                /* Mozilla Firefox */
+                input[type="range"]::-moz-range-thumb {
+                    width: 20px;
+                    height: 20px;
+                    background: blue;
+                    cursor: pointer;
+                    border-radius: 50%;
+                }
+
+                input[type="range"]::-moz-range-track {
+                    background: transparent;
+                }
+
             }
-            
-            .progress-bar {
-                position: absolute;
-                height: 12px;
-                border: 0.84px solid #EE1B84;
-                border-radius: 8px;
-                margin-top: 2px;
-                top: 0;
-                width: 19%;
-                background-color: #FFEE64;
-            }
-            
-            .progress-fill {
-                background-color: #FFEE64;
-                position: absolute;
-                top: 0;
-            }
-            
             
   
             .info__right {
                 text-align: right;
             }
             .claim-button {
-                background-color: #EE1B84;
+                background-color: #872151;
                 padding: 12px 20px 12px 20px;
                 border-radius: 8px;
                 color: #FFEE64;
 
+            }
+            .claim-button.active {
+                background-color: #EE1B84;
             }
             .reward-right {
                 p {
