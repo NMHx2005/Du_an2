@@ -36,10 +36,10 @@
             color: #FFEE64;                 /* Màu chữ */
             font-weight: 500;               /* Độ đậm của font chữ */
             font-size: 16px;                /* Kích thước font */
-            position: absolute;             /* Position để đặt nút tuyệt đối */
-            top: 50%;                       /* Căn chỉnh theo trục dọc */
-            left: 50%;                      /* Căn chỉnh theo trục ngang */
-            transform: translate(-50%, -50%); /* Dịch chuyển nút để nằm chính giữa */
+            // position: absolute;             /* Position để đặt nút tuyệt đối */
+            // top: 50%;                       /* Căn chỉnh theo trục dọc */
+            // left: 50%;                      /* Căn chỉnh theo trục ngang */
+            // transform: translate(-50%, -50%); /* Dịch chuyển nút để nằm chính giữa */
         }
         /* General card styling */
         .allocation-card {
@@ -199,15 +199,20 @@
             height: 445px;
             border: 2px solid #EE1B84;
             border-radius: 20px;
-            padding-top: 15px;
-            padding-bottom: 12px;
-            background-size: cover;            /* Đảm bảo hình ảnh phủ toàn bộ phần tử */
-            // background-position: center;       /* Căn giữa hình ảnh */
-            background-repeat: no-repeat;      /* Không lặp lại hình ảnh */
+            padding-top: 22px;
+            // padding-bottom: 13px;
+            background-size: contain; /* Chỉnh lại kích thước ảnh nền */
+            background-position: center; /* Canh giữa ảnh nền */
+            background-repeat: no-repeat;
             text-align: center;
-            img {
+            .top__image {
+                width: 100%;
+                height: calc(90% - 40px);
                 margin-bottom: 10px;
-                 /* Tạo bóng đổ lan rộng */
+            }
+            img {
+                max-width: 100%; /* Đảm bảo ảnh không lớn hơn vùng chứa */
+                max-height: 100%; /* Giới hạn chiều cao */
                 box-shadow: 
                     0 -15px 90px rgba(128, 128, 128, 0.7), /* Bóng xám lan rộng ở phía trên */
                     0 15px 90px rgba(255, 0, 255, 0.6);    /* Bóng tím lan rộng ở phía dưới */
@@ -734,4 +739,98 @@
 
 .title__mobile, .reward__mobile {
     display: none;
+}
+
+.airdrop__content .image__left .allocation-card {
+    height: 100%;
+}
+.airdrop__content .image__left .claim-btn {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+.container__pirchat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    position: relative;
+}
+
+#pieChart {
+    display: block;
+    margin: 0 auto;
+    max-width: 225px;
+    max-height: 225px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.chart-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: #ff007f; /* Màu chữ cho nội dung */
+}
+
+.chart-text .title__progress {
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 4px;
+    color: #EE1B84; /* Màu chữ phần trăm */
+}
+
+.chart-text .detail__progress {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #EE1B84;
+}
+
+.claim-button {
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+}
+.chart-text .claimed-values, .unlocked-percentage {
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 2px;
+    font-family: 'Comic Neue', Courier, monospace;
+}
+.claim-button:hover {
+    background-color: #5e2a73;
+}
+
+.loading-spinner {
+    border: 4px solid #FFEE64;
+    border-top: 4px solid #7D3C98;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+    visibility: hidden;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.button___claim {
+    display: flex;
+    justify-content: center;
 }
